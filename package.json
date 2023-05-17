@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "client-extensions/carbon-gray-100-v11"
+        ]
+    }
+}

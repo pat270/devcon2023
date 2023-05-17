@@ -1,0 +1,5 @@
+build
+node_modules
+node_modules_cache
+.gradle
+gradle-local.properties
