@@ -1,0 +1,8 @@
+assemble:
+    - from: build/buildTheme/img
+      into: static/img
+carbon-gray-100-v11:
+    clayURL: css/clay.css
+    mainURL: css/main.css
+    name: Carbon Gray 100 v11
+    type: themeCSS

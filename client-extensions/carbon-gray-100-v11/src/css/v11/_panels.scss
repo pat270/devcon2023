@@ -1,0 +1,241 @@
+$panel-bg: transparent !default;
+$panel-border-color: transparent !default;
+$panel-border-style: solid !default;
+
+$panel-border-bottom-width: 1px !default;
+$panel-border-left-width: 1px !default;
+$panel-border-right-width: 1px !default;
+$panel-border-top-width: 1px !default;
+$panel-border-width: $panel-border-top-width $panel-border-right-width
+	$panel-border-bottom-width $panel-border-left-width !default;
+
+$panel-border-radius: $border-radius !default;
+$panel-box-shadow: null !default;
+$panel-margin-bottom: $spacer !default;
+
+// Panel Header
+
+$panel-header-border-bottom-width: 1px !default;
+$panel-header-offset-border-radius: calc(
+	#{$panel-border-radius} - #{$panel-border-top-width}
+) !default;
+$panel-header-font-size: 0.875rem !default; // 14px
+$panel-header-line-height: $headings-line-height !default;
+$panel-header-padding-x: 1.25rem !default;
+$panel-header-padding-y: 0.75rem !default;
+
+$panel-header-collapse-icon-font-size: 0.75rem !default; // 12px
+$panel-header-collapse-icon-bottom: null !default;
+$panel-header-collapse-icon-left: null !default;
+$panel-header-collapse-icon-right: null !default;
+$panel-header-collapse-icon-top: clay-collapse-icon-align(
+	$panel-header-padding-y,
+	0,
+	1em,
+	$panel-header-line-height
+) !default;
+
+$panel-header-collapse-icon-padding-left: null !default;
+$panel-header-collapse-icon-padding-right: null !default;
+
+$panel-header-link-text-decoration: null !default;
+$panel-header-link-hover-text-decoration: none !default;
+
+$panel-header-link: () !default;
+$panel-header-link: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		text-decoration: $panel-header-link-text-decoration,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: inherit,
+			text-decoration: $panel-header-link-hover-text-decoration,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+			z-index: $zindex-panel-header-link-focus,
+		),
+	),
+	$panel-header-link
+);
+
+$panel-header-collapsed-link: () !default;
+$panel-header-collapsed-link: map-deep-merge(
+	(
+		border-color: c-unset,
+		transition: c-unset,
+	),
+	$panel-header-collapsed-link
+);
+
+// Panel Body
+
+$panel-body-padding-x: 1.25rem !default;
+$panel-body-padding-y: 0.75rem !default;
+
+// Panel Footer
+
+$panel-footer-border-top-width: 0px !default;
+$panel-footer-offset-border-radius: calc(
+	#{$panel-border-radius} - #{$panel-border-bottom-width}
+) !default;
+$panel-footer-padding-x: $panel-header-padding-x !default;
+$panel-footer-padding-y: $panel-header-padding-y !default;
+
+// Panel Title
+
+$panel-title-font-size: 0.875rem !default; // 14px
+$panel-title-font-weight: $font-weight-semi-bold !default;
+$panel-title-text-transform: uppercase !default;
+
+// Panel Title Small Element
+
+$panel-title-small-font-size: 100% !default;
+$panel-title-small-margin-left: 0.375rem !default; // 6px
+
+// Panel Group
+
+$panel-group-panel-margin-bottom: math-sign(
+	$panel-border-bottom-width
+) !default;
+
+$panel-group-panel-unstyled: () !default;
+$panel-group-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 1.5rem,
+	),
+	$panel-group-panel-unstyled
+);
+
+// Panel Group Sm
+
+$panel-group-sm: () !default;
+$panel-group-sm: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		panel-header: (
+			padding-bottom: 0.5rem,
+			padding-top: 0.5rem,
+		),
+		panel-title: (
+			font-size: 0.75rem,
+		),
+		collapse-icon: (
+			top: 0.6875rem,
+		),
+	),
+	$panel-group-sm
+);
+
+$panel-group-sm-panel-unstyled: () !default;
+$panel-group-sm-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 1rem,
+	),
+	$panel-group-sm-panel-unstyled
+);
+
+// Panel Group Flush
+
+$panel-group-flush-body-margin-bottom: 1.5rem !default;
+$panel-group-flush-body-padding: 0 !default;
+
+$panel-group-flush-collapse-icon-left: null !default;
+$panel-group-flush-collapse-icon-right: 0 !default;
+$panel-group-flush-collapse-icon-padding-left: null !default;
+$panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
+
+$panel-group-flush-panel-unstyled: () !default;
+$panel-group-flush-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 1.5rem,
+		panel-body: (
+			margin-bottom: 0,
+		),
+	),
+	$panel-group-flush-panel-unstyled
+);
+
+// Panel Variants
+
+$panel-secondary-header-link: () !default;
+
+$panel-secondary: () !default;
+$panel-secondary: map-deep-merge(
+	(
+		border-color: c-unset,
+		color: $cds-text-primary,
+		panel-header: (
+			background-color: c-unset,
+			border-color: $cds-border-subtle-01,
+			link: (
+				hover: (
+					background-color: $cds-layer-hover-01,
+					border-color: transparent,
+					color: $cds-text-primary,
+				),
+				focus: (
+					background-color: transparent,
+					color: $cds-text-primary,
+				),
+				disabled: (
+					background-color: transparent,
+					border-color: $cds-border-subtle-01,
+					color: $cds-text-disabled,
+				),
+			),
+		),
+		panel-footer: (
+			background-color: c-unset,
+			border-color: $cds-border-subtle-01,
+		),
+	),
+	$panel-secondary
+);
+
+// Panel Unstyled
+
+$panel-unstyled-header-link: () !default;
+$panel-unstyled-header-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		focus: (
+			box-shadow: #{0 0 0 0.25rem $body-bg,
+			0 0 0 0.375rem $primary-l1},
+		),
+	),
+	$panel-unstyled-header-link
+);
+
+$panel-unstyled: () !default;
+$panel-unstyled: map-deep-merge(
+	(
+		background-color: transparent,
+		border-radius: 0px,
+		border-width: 0px,
+		margin-bottom: 1.5rem,
+		panel-header: (
+			border-color: $gray-500,
+			border-radius: 0px,
+			border-style: solid,
+			border-width: 0 0 1px 0,
+			padding-left: 0,
+			collapsed: (
+				border-color: $gray-500,
+			),
+			link: $panel-unstyled-header-link,
+		),
+		collapse-icon: (
+			right: 0,
+		),
+		panel-body: (
+			padding: 1rem 0 0.1px 0,
+		),
+		panel-footer: (
+			padding: 1rem 0 0.1px 0,
+		),
+	),
+	$panel-unstyled
+);

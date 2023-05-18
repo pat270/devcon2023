@@ -1,0 +1,11 @@
+@import 'components/sidebar';
+
+.default-logo {
+	&:hover {
+		color: $cds-text-primary;
+	}
+}
+
+.captcha {
+	background-color: #fff;
+}

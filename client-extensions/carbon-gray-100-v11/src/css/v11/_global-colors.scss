@@ -1,0 +1,269 @@
+$cds-black: #000 !default;
+
+$cds-black-100-hover: #212121 !default;
+
+$cds-white: #fff !default;
+
+$cds-gray-10: #f4f4f4 !default;
+$cds-gray-20: #e0e0e0 !default;
+$cds-gray-30: #c6c6c6 !default;
+$cds-gray-40: #a8a8a8 !default;
+$cds-gray-50: #8d8d8d !default;
+$cds-gray-60: #6f6f6f !default;
+$cds-gray-70: #525252 !default;
+$cds-gray-80: #393939 !default;
+$cds-gray-90: #262626 !default;
+$cds-gray-100: #161616 !default;
+
+$cds-gray-10-hover: #e8e8e8 !default;
+$cds-gray-20-hover: #d1d1d1 !default;
+$cds-gray-30-hover: #b5b5b5 !default;
+$cds-gray-40-hover: #999999 !default;
+$cds-gray-50-hover: #7a7a7a !default;
+$cds-gray-60-hover: #5e5e5e !default;
+$cds-gray-70-hover: #636363 !default;
+$cds-gray-80-hover: #474747 !default;
+$cds-gray-90-hover: #353535 !default;
+$cds-gray-100-hover: #292929 !default;
+
+$cds-cool-gray-10: #f2f4f8 !default;
+$cds-cool-gray-20: #dde1e6 !default;
+$cds-cool-gray-30: #c1c7cd !default;
+$cds-cool-gray-40: #a2a9b0 !default;
+$cds-cool-gray-50: #878d96 !default;
+$cds-cool-gray-60: #697077 !default;
+$cds-cool-gray-70: #4d5358 !default;
+$cds-cool-gray-80: #343a3f !default;
+$cds-cool-gray-90: #21272a !default;
+$cds-cool-gray-100: #121619 !default;
+
+$cds-cool-gray-10-hover: #e4e9f1 !default;
+$cds-cool-gray-20-hover: #cdd3da !default;
+$cds-cool-gray-30-hover: #abd5bd !default;
+$cds-cool-gray-40-hover: #9199a1 !default;
+$cds-cool-gray-50-hover: #757b85 !default;
+$cds-cool-gray-60-hover: #585e64 !default;
+$cds-cool-gray-70-hover: #5d646a !default;
+$cds-cool-gray-80-hover: #434a51 !default;
+$cds-cool-gray-90-hover: #2b3236 !default;
+$cds-cool-gray-100-hover: #222a2f !default;
+
+$cds-warm-gray-10: #f7f3f2 !default;
+$cds-warm-gray-20: #e5e0df !default;
+$cds-warm-gray-30: #cac5c4 !default;
+$cds-warm-gray-40: #ada8a8 !default;
+$cds-warm-gray-50: #8f8b8b !default;
+$cds-warm-gray-60: #726e6e !default;
+$cds-warm-gray-70: #565151 !default;
+$cds-warm-gray-80: #3c3838 !default;
+$cds-warm-gray-90: #272525 !default;
+$cds-warm-gray-100: #171414 !default;
+
+$cds-warm-gray-10-hover: #f0e8e6 !default;
+$cds-warm-gray-20-hover: #d8d0cf !default;
+$cds-warm-gray-30-hover: #b9b3b1 !default;
+$cds-warm-gray-40-hover: #9c9696 !default;
+$cds-warm-gray-50-hover: #7f7b7b !default;
+$cds-warm-gray-60-hover: #605d5d !default;
+$cds-warm-gray-70-hover: #696363 !default;
+$cds-warm-gray-80-hover: #4c4848 !default;
+$cds-warm-gray-90-hover: #343232 !default;
+$cds-warm-gray-100-hover: #2c2626 !default;
+
+$cds-blue-10: #edf5ff !default;
+$cds-blue-20: #d0e2ff !default;
+$cds-blue-30: #a6c8ff !default;
+$cds-blue-40: #78a9ff !default;
+$cds-blue-50: #4589ff !default;
+$cds-blue-60: #0f62fe !default;
+$cds-blue-70: #0043ce !default;
+$cds-blue-80: #002d9c !default;
+$cds-blue-90: #001d6c !default;
+$cds-blue-100: #001141 !default;
+
+$cds-blue-10-hover: #dbebff !default;
+$cds-blue-20-hover: #b8d3ff !default;
+$cds-blue-30-hover: #8ab6ff !default;
+$cds-blue-40-hover: #5c97ff !default;
+$cds-blue-50-hover: #1f70ff !default;
+$cds-blue-60-hover: #0050e6 !default;
+$cds-blue-70-hover: #0053ff !default;
+$cds-blue-80-hover: #0039c7 !default;
+$cds-blue-90-hover: #00258a !default;
+$cds-blue-100-hover: #001f75 !default;
+
+$cds-purple-10: #f6f2ff !default;
+$cds-purple-20: #e8daff !default;
+$cds-purple-30: #d4bbff !default;
+$cds-purple-40: #be95ff !default;
+$cds-purple-50: #a56eff !default;
+$cds-purple-60: #8a3ffc !default;
+$cds-purple-70: #6929c4 !default;
+$cds-purple-80: #491d8b !default;
+$cds-purple-90: #31135e !default;
+$cds-purple-100: #1c0f30 !default;
+
+$cds-purple-10-hover: #ede5ff !default;
+$cds-purple-20-hover: #dcc7ff !default;
+$cds-purple-30-hover: #c5a3ff !default;
+$cds-purple-40-hover: #ae7aff !default;
+$cds-purple-50-hover: #9352ff !default;
+$cds-purple-60-hover: #7822fb !default;
+$cds-purple-70-hover: #7c3dd6 !default;
+$cds-purple-80-hover: #5b24ad !default;
+$cds-purple-90-hover: #40197b !default;
+$cds-purple-100-hover: #341c59 !default;
+
+$cds-magenta-10: #fff0f7 !default;
+$cds-magenta-20: #ffd6e8 !default;
+$cds-magenta-30: #ffafd2 !default;
+$cds-magenta-40: #ff7eb6 !default;
+$cds-magenta-50: #ee5396 !default;
+$cds-magenta-60: #d02670 !default;
+$cds-magenta-70: #9f1853 !default;
+$cds-magenta-80: #740937 !default;
+$cds-magenta-90: #510224 !default;
+$cds-magenta-100: #2a0a18 !default;
+
+$cds-magenta-10-hover: #ffe0ef !default;
+$cds-magenta-20-hover: #ffbdda !default;
+$cds-magenta-30-hover: #ff94c3 !default;
+$cds-magenta-40-hover: #ff57a0 !default;
+$cds-magenta-50-hover: #e3176f !default;
+$cds-magenta-60-hover: #b0215f !default;
+$cds-magenta-70-hover: #bf1d63 !default;
+$cds-magenta-80-hover: #8e0b43 !default;
+$cds-magenta-90-hover: #68032e !default;
+$cds-magenta-100-hover: #53142f !default;
+
+$cds-red-10: #fff1f1 !default;
+$cds-red-20: #ffd7d9 !default;
+$cds-red-30: #ffb3b8 !default;
+$cds-red-40: #ff8389 !default;
+$cds-red-50: #fa4d56 !default;
+$cds-red-60: #da1e28 !default;
+$cds-red-70: #a2191f !default;
+$cds-red-80: #750e13 !default;
+$cds-red-90: #520408 !default;
+$cds-red-100: #2d0709 !default;
+
+$cds-red-10-hover: #ffe0e0 !default;
+$cds-red-20-hover: #ffc2c5 !default;
+$cds-red-30-hover: #ff99a0 !default;
+$cds-red-40-hover: #ff6168 !default;
+$cds-red-50-hover: #ee0713 !default;
+$cds-red-60-hover: #b81922 !default;
+$cds-red-70-hover: #c21e25 !default;
+$cds-red-80-hover: #921118 !default;
+$cds-red-90-hover: #66050a !default;
+$cds-red-100-hover: #540d11 !default;
+
+$cds-orange-10: #fff2e8 !default;
+$cds-orange-20: #ffd9be !default;
+$cds-orange-30: #ffb784 !default;
+$cds-orange-40: #ff832b !default;
+$cds-orange-50: #eb6200 !default;
+$cds-orange-60: #ba4e00 !default;
+$cds-orange-70: #8a3800 !default;
+$cds-orange-80: #5e2900 !default;
+$cds-orange-90: #3e1a00 !default;
+$cds-orange-100: #231000 !default;
+
+$cds-orange-10-hover: #ffe2cc !default;
+$cds-orange-20-hover: #ffc69e !default;
+$cds-orange-30-hover: #ff9d57 !default;
+$cds-orange-40-hover: #fa6800 !default;
+$cds-orange-50-hover: #cc5500 !default;
+$cds-orange-60-hover: #9e4200 !default;
+$cds-orange-70-hover: #a84400 !default;
+$cds-orange-80-hover: #753300 !default;
+$cds-orange-90-hover: #522200 !default;
+$cds-orange-100-hover: #421e00 !default;
+
+$cds-yellow-10: #fcf4d6 !default;
+$cds-yellow-20: #fddc69 !default;
+$cds-yellow-30: #f1c21b !default;
+$cds-yellow-40: #d2a106 !default;
+$cds-yellow-50: #b28600 !default;
+$cds-yellow-60: #8e6a00 !default;
+$cds-yellow-70: #684e00 !default;
+$cds-yellow-80: #483700 !default;
+$cds-yellow-90: #302400 !default;
+$cds-yellow-100: #1c1500 !default;
+
+$cds-yellow-10-hover: #f8e6a0 !default;
+$cds-yellow-20-hover: #fccd27 !default;
+$cds-yellow-30-hover: #ddb00e !default;
+$cds-yellow-40-hover: #bc9005 !default;
+$cds-yellow-50-hover: #9e7700 !default;
+$cds-yellow-60-hover: #755800 !default;
+$cds-yellow-70-hover: #806000 !default;
+$cds-yellow-80-hover: #5c4600 !default;
+$cds-yellow-90-hover: #3d2e00 !default;
+$cds-yellow-100-hover: #332600 !default;
+
+$cds-green-10: #defbe6 !default;
+$cds-green-20: #a7f0ba !default;
+$cds-green-30: #6fdc8c !default;
+$cds-green-40: #42be65 !default;
+$cds-green-50: #24a148 !default;
+$cds-green-60: #198038 !default;
+$cds-green-70: #0e6027 !default;
+$cds-green-80: #044317 !default;
+$cds-green-90: #022d0d !default;
+$cds-green-100: #071908 !default;
+
+$cds-green-10-hover: #b6f6c8 !default;
+$cds-green-20-hover: #74e792 !default;
+$cds-green-30-hover: #36ce5e !default;
+$cds-green-40-hover: #3bab5a !default;
+$cds-green-50-hover: #208e3f !default;
+$cds-green-60-hover: #166f31 !default;
+$cds-green-70-hover: #11742f !default;
+$cds-green-80-hover: #05521c !default;
+$cds-green-90-hover: #033b11 !default;
+$cds-green-100-hover: #0d300f !default;
+
+$cds-teal-10: #d9fbfb !default;
+$cds-teal-20: #9ef0f0 !default;
+$cds-teal-30: #3ddbd9 !default;
+$cds-teal-40: #08bdba !default;
+$cds-teal-50: #009d9a !default;
+$cds-teal-60: #007d79 !default;
+$cds-teal-70: #005d5d !default;
+$cds-teal-80: #004144 !default;
+$cds-teal-90: #022b30 !default;
+$cds-teal-100: #081a1c !default;
+
+$cds-teal-10-hover: #acf6f6 !default;
+$cds-teal-20-hover: #57e5e5 !default;
+$cds-teal-30-hover: #25cac8 !default;
+$cds-teal-40-hover: #07aba9 !default;
+$cds-teal-50-hover: #008a87 !default;
+$cds-teal-60-hover: #006b68 !default;
+$cds-teal-70-hover: #007070 !default;
+$cds-teal-80-hover: #005357 !default;
+$cds-teal-90-hover: #033940 !default;
+$cds-teal-100-hover: #0f3034 !default;
+
+$cds-cyan-10: #e5f6ff !default;
+$cds-cyan-20: #bae6ff !default;
+$cds-cyan-30: #82cfff !default;
+$cds-cyan-40: #33b1ff !default;
+$cds-cyan-50: #1192e8 !default;
+$cds-cyan-60: #0072c3 !default;
+$cds-cyan-70: #00539a !default;
+$cds-cyan-80: #003a6d !default;
+$cds-cyan-90: #012749 !default;
+$cds-cyan-100: #061727 !default;
+
+$cds-cyan-10-hover: #cceeff !default;
+$cds-cyan-20-hover: #99daff !default;
+$cds-cyan-30-hover: #57beff !default;
+$cds-cyan-40-hover: #059fff !default;
+$cds-cyan-50-hover: #0f7ec8 !default;
+$cds-cyan-60-hover: #005fa3 !default;
+$cds-cyan-70-hover: #0066bd !default;
+$cds-cyan-80-hover: #00498a !default;
+$cds-cyan-90-hover: #013360 !default;
+$cds-cyan-100-hover: #0b2947 !default;

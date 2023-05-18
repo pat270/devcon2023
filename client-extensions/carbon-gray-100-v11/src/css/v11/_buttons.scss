@@ -1,0 +1,1158 @@
+// Buttons
+
+$btn-border-width: 1px !default;
+$btn-border-radius: $border-radius !default;
+$btn-box-shadow: null !default;
+$btn-cursor: $link-cursor !default;
+$btn-font-family: $input-btn-font-family !default;
+$btn-font-size: 0.875rem !default;
+$btn-font-weight: $font-weight-normal !default;
+$btn-line-height: 18px !default;
+$btn-padding-x: 0.75rem !default;
+$btn-padding-y: 0.625rem !default;
+$btn-transition: $component-transition !default;
+$btn-white-space: null !default;
+
+$btn-font-size-mobile: null !default;
+$btn-padding-x-mobile: null !default;
+$btn-padding-y-mobile: null !default;
+
+$btn-focus-width: $input-btn-focus-width !default;
+$btn-focus-box-shadow: $component-focus-inset-box-shadow-2 !default;
+
+$btn-active-box-shadow: c-unset !default;
+
+$btn-disabled-cursor: $disabled-cursor !default;
+$btn-disabled-opacity: c-unset !default;
+
+$btn-inline-item-font-size: null !default;
+
+$btn-section-font-size: 0.6875rem !default; // 11px
+$btn-section-font-weight: $font-weight-semi-bold !default;
+$btn-section-line-height: 1 !default;
+
+$btn: () !default;
+$btn: map-deep-merge(
+	(
+		align-items: center,
+		background-color: transparent,
+		border-color: transparent,
+		border-style: solid,
+		border-width: $btn-border-width,
+		border-radius: clay-enable-rounded($btn-border-radius),
+		box-shadow: clay-enable-shadows($btn-box-shadow),
+		color: $body-color,
+		cursor: $btn-cursor,
+		display: inline-flex,
+		font-family: $btn-font-family,
+		font-size: $btn-font-size,
+		font-weight: $btn-font-weight,
+		justify-content: space-between,
+		line-height: $btn-line-height,
+		padding-bottom: $btn-padding-y,
+		padding-left: $btn-padding-x,
+		padding-right: 4.1875rem,
+		padding-top: $btn-padding-y,
+		text-align: left,
+		text-transform: none,
+		transition: clay-enable-transitions($btn-transition),
+		user-select: none,
+		vertical-align: middle,
+		white-space: $btn-white-space,
+		mobile: (
+			font-size: $btn-font-size-mobile,
+			padding-bottom: $btn-padding-y-mobile,
+			padding-left: $btn-padding-x-mobile,
+			padding-right: $btn-padding-x-mobile,
+			padding-top: $btn-padding-y-mobile,
+		),
+		hover: (
+			border-color: transparent,
+			color: $body-color,
+			text-decoration: none,
+		),
+		focus: (
+			border-color: $cds-focus,
+			box-shadow: $btn-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			border-color: transparent,
+			box-shadow: c-unset,
+			focus: (
+				box-shadow: none,
+			),
+		),
+		active-class: (
+			border-color: transparent,
+			box-shadow: c-unset,
+			focus: (
+				border-color: $cds-focus,
+				box-shadow: $btn-focus-box-shadow,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			border-color: transparent,
+			color: $cds-text-on-color-disabled,
+			cursor: $btn-disabled-cursor,
+			opacity: $btn-disabled-opacity,
+			focus: (
+				box-shadow: none,
+			),
+			active: (
+				pointer-events: none,
+			),
+		),
+		show: (
+			border-color: c-unset,
+		),
+		inline-item: (
+			font-size: $btn-inline-item-font-size,
+			line-height: c-unset,
+			margin-top: c-unset,
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		btn-section: (
+			display: block,
+			font-size: $btn-section-font-size,
+			font-weight: $btn-section-font-weight,
+			line-height: $btn-section-line-height,
+		),
+		loading-animation: 'loading-animation-base-sm',
+	),
+	$btn
+);
+
+// Button Lg
+
+$btn-border-radius-lg: $border-radius-lg !default;
+$btn-font-size-lg: c-unset !default;
+$btn-line-height-lg: c-unset !default;
+$btn-padding-x-lg: c-unset !default;
+$btn-padding-y-lg: 0.875rem !default;
+$btn-inline-item-font-size-lg: null !default;
+$btn-section-font-size-lg: 0.8125rem !default; // 13px
+
+$btn-font-size-lg-mobile: null !default;
+$btn-padding-x-lg-mobile: null !default;
+$btn-padding-y-lg-mobile: null !default;
+
+$btn-lg: () !default;
+$btn-lg: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($btn-border-radius-lg),
+		font-size: $btn-font-size-lg,
+		line-height: $btn-line-height-lg,
+		padding-bottom: $btn-padding-y-lg,
+		padding-left: $btn-padding-x-lg,
+		padding-right: $btn-padding-x-lg,
+		padding-top: $btn-padding-y-lg,
+		mobile: (
+			font-size: $btn-font-size-lg-mobile,
+			padding-bottom: $btn-padding-y-lg-mobile,
+			padding-left: $btn-padding-x-lg-mobile,
+			padding-right: $btn-padding-x-lg-mobile,
+			padding-top: $btn-padding-y-lg-mobile,
+		),
+		inline-item: (
+			font-size: $btn-inline-item-font-size-lg,
+		),
+		btn-section: (
+			font-size: $btn-section-font-size-lg,
+		),
+		lexicon-icon: (
+			font-size: c-unset,
+		),
+	),
+	$btn-lg
+);
+
+// Button Sm
+
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-font-size-sm: c-unset !default;
+$btn-line-height-sm: c-unset !default;
+$btn-padding-x-sm: c-unset !default;
+$btn-padding-y-sm: 0.375rem !default;
+$btn-inline-item-font-size-sm: null !default;
+$btn-section-font-size-sm: 0.5625rem !default; // 9px
+
+$btn-font-size-sm-mobile: null !default;
+$btn-padding-x-sm-mobile: null !default;
+$btn-padding-y-sm-mobile: null !default;
+
+$btn-sm: () !default;
+$btn-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($btn-border-radius-sm),
+		font-size: $btn-font-size-sm,
+		line-height: $btn-line-height-sm,
+		padding-bottom: $btn-padding-y-sm,
+		padding-left: $btn-padding-x-sm,
+		padding-right: $btn-padding-x-sm,
+		padding-top: $btn-padding-y-sm,
+		mobile: (
+			font-size: $btn-font-size-sm-mobile,
+			padding-bottom: $btn-padding-y-sm-mobile,
+			padding-left: $btn-padding-x-sm-mobile,
+			padding-right: $btn-padding-x-sm-mobile,
+			padding-top: $btn-padding-y-sm-mobile,
+		),
+		inline-item: (
+			font-size: $btn-inline-item-font-size-sm,
+		),
+		btn-section: (
+			font-size: $btn-section-font-size-sm,
+		),
+		lexicon-icon: (
+			font-size: c-unset,
+		),
+	),
+	$btn-sm
+);
+
+// Button Sizes
+
+$btn-sizes: () !default;
+$btn-sizes: map-deep-merge(
+	(
+		btn-xs: (
+			font-size: c-unset,
+			padding-bottom: 0.125rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			padding-top: 0.125rem,
+			inline-item: (
+				font-size: inherit,
+				margin-top: c-unset,
+			),
+			inline-item-before: (
+				margin-right: 0.25rem,
+			),
+			inline-item-after: (
+				margin-left: 0.25rem,
+			),
+			btn-section: (
+				font-size: 0.375rem,
+			),
+		),
+		btn-lg: $btn-lg,
+		btn-xl: (
+			padding-bottom: 1.875rem,
+			padding-top: 0.875rem,
+		),
+		btn-expressive: (
+			font-size: 1rem,
+			line-height: 22px,
+			padding-bottom: 0.75rem,
+			padding-top: 0.75rem,
+			lexicon-icon: (
+				font-size: 0.75rem,
+			),
+		),
+		btn-sm: $btn-sm,
+	),
+	$btn-sizes
+);
+
+// .btn-monospaced
+
+$btn-monospaced-padding-x: 0 !default;
+$btn-monospaced-padding-y: 0 !default;
+$btn-monospaced-size: 2.5rem !default; // 40px
+
+$btn-monospaced-size-mobile: null !default;
+
+$btn-monospaced: () !default;
+$btn-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		flex-direction: column,
+		height: $btn-monospaced-size,
+		justify-content: center,
+		line-height: 1,
+		overflow: hidden,
+		padding-bottom: $btn-monospaced-padding-y,
+		padding-left: $btn-monospaced-padding-x,
+		padding-right: $btn-monospaced-padding-x,
+		padding-top: $btn-monospaced-padding-y,
+		text-align: center,
+		white-space: normal,
+		width: $btn-monospaced-size,
+		word-wrap: break-word,
+		mobile: (
+			height: $btn-monospaced-size-mobile,
+			width: $btn-monospaced-size-mobile,
+		),
+		inline-item: (
+			margin-top: 0,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+		c-inner: (
+			align-items: center,
+			display: flex,
+			flex-direction: column,
+			height: 100%,
+			justify-content: center,
+			padding: 0,
+			width: 100%,
+		),
+	),
+	$btn-monospaced
+);
+
+// .btn-monospaced.btn-lg
+
+$btn-monospaced-padding-x-lg: null !default;
+$btn-monospaced-padding-y-lg: null !default;
+$btn-monospaced-size-lg: 3rem !default; // 48px
+
+$btn-monospaced-size-lg-mobile: null !default;
+
+$btn-monospaced-lg: () !default;
+$btn-monospaced-lg: map-deep-merge(
+	(
+		height: $btn-monospaced-size-lg,
+		padding-bottom: $btn-monospaced-padding-y-lg,
+		padding-left: $btn-monospaced-padding-x-lg,
+		padding-right: $btn-monospaced-padding-x-lg,
+		padding-top: $btn-monospaced-padding-y-lg,
+		width: $btn-monospaced-size-lg,
+		mobile: (
+			height: $btn-monospaced-size-lg-mobile,
+			width: $btn-monospaced-size-lg-mobile,
+		),
+	),
+	$btn-monospaced-lg
+);
+
+// .btn-monospaced.btn-sm
+
+$btn-monospaced-padding-x-sm: null !default;
+$btn-monospaced-padding-y-sm: null !default;
+$btn-monospaced-size-sm: 2rem !default; // 31px
+
+$btn-monospaced-size-sm-mobile: null !default;
+
+$btn-monospaced-sm: () !default;
+$btn-monospaced-sm: map-deep-merge(
+	(
+		height: $btn-monospaced-size-sm,
+		padding-bottom: $btn-monospaced-padding-y-sm,
+		padding-left: $btn-monospaced-padding-x-sm,
+		padding-right: $btn-monospaced-padding-x-sm,
+		padding-top: $btn-monospaced-padding-y-sm,
+		width: $btn-monospaced-size-sm,
+		mobile: (
+			height: $btn-monospaced-size-sm-mobile,
+			width: $btn-monospaced-size-sm-mobile,
+		),
+	),
+	$btn-monospaced-sm
+);
+
+// Button Monospaced Sizes
+
+$btn-monospaced-sizes: () !default;
+$btn-monospaced-sizes: map-deep-merge(
+	(
+		btn-monospaced-xs: (
+			height: 1.5rem,
+			width: 1.5rem,
+		),
+		btn-monospaced: $btn-monospaced,
+		btn-monospaced-sm: $btn-monospaced-sm,
+		btn-monospaced-lg: $btn-monospaced-lg,
+		btn-monospaced-xl: (
+			height: 4rem,
+			width: 4rem,
+		),
+	),
+	$btn-monospaced-sizes
+);
+
+// Button Block
+
+$btn-block-spacing-y: 0.5rem !default;
+
+// Button Unstyled
+
+$btn-unstyled: () !default;
+$btn-unstyled: map-deep-merge(
+	(
+		background-color: rgba(0, 0, 0, 0.001),
+		border-width: 0,
+		color: inherit,
+		cursor: $btn-cursor,
+		font-size: inherit,
+		font-weight: inherit,
+		line-height: inherit,
+		max-width: 100%,
+		padding: 0 $btn-padding-x,
+		text-align: left,
+		text-transform: inherit,
+		vertical-align: baseline,
+		disabled: (
+			background-color: transparent,
+		),
+		c-inner: (
+			margin: 0,
+			max-width: none,
+		),
+	),
+	$btn-unstyled
+);
+
+// Button Group
+
+$btn-group-item-margin-right: map-get($spacers, 2) !default;
+
+// Button Toolbar
+
+$btn-toolbar-spacer-x: 0.5rem !default; // 8px
+$btn-toolbar-spacer-y: 0.125rem !default; // 2px
+
+// Button Variants
+
+$btn-primary: () !default;
+$btn-primary: map-deep-merge(
+	(
+		background-color: $cds-button-primary,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: clay-enable-shadows($btn-box-shadow),
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-button-primary-hover,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-button-primary,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-button-primary-active,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-primary
+);
+
+$btn-secondary: () !default;
+$btn-secondary: map-deep-merge(
+	(
+		background-color: $cds-button-secondary,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-button-secondary-hover,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-button-secondary,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-button-secondary-active,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-secondary
+);
+
+$btn-tertiary: () !default;
+$btn-tertiary: map-deep-merge(
+	(
+		background-color: c-unset,
+		border-color: $cds-button-tertiary,
+		color: $cds-button-tertiary,
+		visited: (
+			color: $cds-button-tertiary,
+		),
+		hover: (
+			background-color: $cds-button-tertiary-hover,
+			border-color: c-unset,
+			color: $cds-text-inverse,
+		),
+		focus: (
+			background-color: $cds-button-tertiary,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-inverse,
+		),
+		active: (
+			background-color: $cds-button-tertiary-active,
+			border-color: c-unset,
+			color: $cds-text-inverse,
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-tertiary
+);
+
+$btn-success: () !default;
+$btn-success: map-deep-merge(
+	(
+		background-color: $cds-green-60,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-green-70,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-green-60,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-green-80,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-success
+);
+
+$btn-info: () !default;
+$btn-info: map-deep-merge(
+	(
+		background-color: $cds-cyan-60,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-cyan-70,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-cyan-60,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-cyan-80,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-info
+);
+
+$btn-warning: () !default;
+$btn-warning: map-deep-merge(
+	(
+		background-color: $cds-yellow-60,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-yellow-70,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-yellow-60,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-yellow-80,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-warning
+);
+
+$btn-danger: () !default;
+$btn-danger: map-deep-merge(
+	(
+		background-color: $cds-button-danger-primary,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-button-danger-hover,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-button-danger-primary,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-button-danger-active,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-danger
+);
+
+$btn-danger-tertiary: () !default;
+$btn-danger-tertiary: map-deep-merge(
+	(
+		background-color: transparent,
+		border-color: $cds-button-danger-secondary,
+		color: $cds-button-danger-secondary,
+		visited: (
+			color: $cds-button-danger-secondary,
+		),
+		hover: (
+			background-color: $cds-button-danger-hover,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-button-danger-secondary,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-button-danger-active,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-danger-tertiary
+);
+
+$btn-light: () !default;
+$btn-light: map-deep-merge(
+	(
+		background-color: $cds-gray-10,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-gray-90,
+		visited: (
+			color: $cds-gray-90,
+		),
+		hover: (
+			background-color: $cds-gray-20,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-gray-90,
+		),
+		focus: (
+			background-color: $cds-gray-10,
+			background-image:c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-gray-90,
+		),
+		active: (
+			background-color: $cds-gray-30,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-gray-90,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-light
+);
+
+$btn-dark: () !default;
+$btn-dark: map-deep-merge(
+	(
+		background-color: $cds-gray-80,
+		background-image: c-unset,
+		border-color: c-unset,
+		box-shadow: c-unset,
+		color: $cds-text-on-color,
+		visited: (
+			color: $cds-text-on-color,
+		),
+		hover: (
+			background-color: $cds-gray-90,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-gray-80,
+			background-image: c-unset,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-gray-100,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+		),
+	),
+	$btn-dark
+);
+
+$btn-link-disabled-color: c-unset !default;
+
+$btn-link: () !default;
+$btn-link: map-deep-merge(
+	(
+		border-radius: c-unset,
+		box-shadow: c-unset,
+		color: $cds-link-primary,
+		font-weight: c-unset,
+		padding-right: $btn-padding-x,
+		text-decoration: none,
+		visited: (
+			color: $cds-link-primary,
+		),
+		hover: (
+			background-color: $cds-background-hover,
+			color: $cds-link-primary-hover,
+			text-decoration: none,
+		),
+		focus: (
+			background-color: transparent,
+			color: $cds-link-primary,
+			box-shadow: c-unset,
+			text-decoration: none,
+		),
+		active: (
+			background-color: $cds-background-active,
+			color: $cds-link-primary-hover,
+		),
+		disabled: (
+			background-color: $cds-button-disabled,
+			background-image: c-unset,
+			border-color: c-unset,
+			color: $cds-text-on-color-disabled,
+			text-decoration: c-unset,
+		),
+	),
+	$btn-link
+);
+
+$btn-palette: () !default;
+$btn-palette: map-deep-merge(
+	(
+		primary: $btn-primary,
+		secondary: $btn-secondary,
+		success: $btn-success,
+		info: $btn-info,
+		warning: $btn-warning,
+		danger: $btn-danger,
+		light: $btn-light,
+		dark: $btn-dark,
+		link: $btn-link,
+		btn-beta: (
+			background-color: $light-l1,
+			color: $info-d1,
+			padding-right: $btn-padding-x,
+			text-transform: uppercase,
+			hover: (
+				background-color: $light,
+				color: $info-d1,
+			),
+			focus: (
+				background-color: $light,
+				color: $info-d1,
+			),
+		),
+	),
+	$btn-palette
+);
+
+// Button Outline Variants
+
+$btn-outline-primary: () !default;
+$btn-outline-primary: map-deep-merge(
+	(
+		border-color: $cds-blue-50,
+		color: $cds-blue-50,
+		visited: (
+			color: $cds-blue-50,
+		),
+		hover: (
+			background-color: $cds-blue-60-hover,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-blue-50,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-blue-80,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-outline-primary
+);
+
+$btn-outline-secondary: () !default;
+$btn-outline-secondary: map-deep-merge($btn-tertiary, $btn-outline-secondary);
+
+$btn-outline-success: () !default;
+$btn-outline-success: map-deep-merge(
+	(
+		border-color: $cds-green-50,
+		color: $cds-green-50,
+		visited: (
+			color: $cds-green-50,
+		),
+		hover: (
+			background-color: $cds-green-70,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-green-60,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-green-80,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-outline-success
+);
+
+$btn-outline-info: () !default;
+$btn-outline-info: map-deep-merge(
+	(
+		border-color: $cds-cyan-50,
+		color: $cds-cyan-50,
+		visited: (
+			color: $cds-cyan-50,
+		),
+		hover: (
+			background-color: $cds-cyan-70,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-cyan-60,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-cyan-80,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-outline-info
+);
+
+$btn-outline-warning: () !default;
+$btn-outline-warning: map-deep-merge(
+	(
+		border-color: $cds-yellow-50,
+		color: $cds-yellow-50,
+		visited: (
+			color: $cds-yellow-50,
+		),
+		hover: (
+			background-color: $cds-yellow-70,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-yellow-60,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-yellow-80,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-outline-warning
+);
+
+$btn-outline-danger: () !default;
+$btn-outline-danger: map-deep-merge($btn-outline-danger, $btn-danger-tertiary);
+
+$btn-outline-light: () !default;
+$btn-outline-light: map-deep-merge(
+	(
+		border-color: $cds-gray-10,
+		color: $cds-gray-10,
+		visited: (
+			color: $cds-gray-10,
+		),
+		hover: (
+			background-color: $cds-gray-20,
+			border-color: c-unset,
+			color: $cds-gray-90,
+		),
+		focus: (
+			background-color: $cds-gray-10,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-gray-90,
+		),
+		active: (
+			background-color: $cds-gray-30,
+			border-color: c-unset,
+			color: $cds-gray-90,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-outline-light
+);
+
+$btn-outline-dark: () !default;
+$btn-outline-dark: map-deep-merge(
+	(
+		border-color: $cds-gray-90,
+		color: $cds-gray-90,
+		visited: (
+			color: $cds-gray-90,
+		),
+		hover: (
+			background-color: $cds-gray-90,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+		),
+		focus: (
+			background-color: $cds-gray-80,
+			border-color: c-unset,
+			box-shadow: c-unset,
+			color: $cds-text-on-color,
+		),
+		active: (
+			background-color: $cds-gray-100,
+			border-color: c-unset,
+			color: $cds-text-on-color,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cds-button-disabled,
+			color: $cds-button-disabled,
+		),
+	),
+	$btn-outline-dark
+);
+
+$btn-outline-borderless: () !default;
+$btn-outline-borderless: map-deep-merge(
+	(
+		border-color: transparent,
+		hover: (
+			border-color: c-unset,
+		),
+		focus: (
+			border-color: c-unset,
+		),
+		disabled: (
+			border-color: c-unset,
+		),
+	),
+	$btn-outline-borderless
+);
+
+$btn-outline-palette: () !default;
+$btn-outline-palette: map-deep-merge(
+	(
+		primary: $btn-outline-primary,
+		secondary: $btn-outline-secondary,
+		success: $btn-outline-success,
+		info: $btn-outline-info,
+		warning: $btn-outline-warning,
+		danger: $btn-outline-danger,
+		light: $btn-outline-light,
+		dark: $btn-outline-dark,
+	),
+	$btn-outline-palette
+);

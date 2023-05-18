@@ -1,0 +1,169 @@
+// Loading Animation
+
+/// @deprecated as of v3.x with no replacement
+
+$loading-icon-font-size: 2.5rem !default; // 40px
+
+/// @deprecated as of v3.x with no replacement
+
+$loading-icon-font-size-sm: map-get($font-scale, 4) !default; // 16px
+
+// Loading Animation
+
+@keyframes cds-rotate{
+	0%{
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(1turn);
+	}
+}
+
+$loading-animation: () !default;
+$loading-animation: map-deep-merge(
+	(
+		merge: false,
+		display: block,
+		height: 1em,
+		margin-left: auto,
+		margin-right: auto,
+		overflow: hidden,
+		position: relative,
+		text-align: left,
+		vertical-align: middle,
+		width: 1em,
+		before: (),
+		after: (
+			animation: cds-rotate 0.69s linear infinite,
+			border: 0.1351em solid transparent,
+			border-color: currentColor currentColor currentColor transparent,
+			border-radius: 50%,
+			content: '',
+			height: 100%,
+			left: 0,
+			position: absolute,
+			top: 0,
+			transform: rotate(0deg),
+			width: 100%,
+		),
+	),
+	$loading-animation
+);
+
+// .loading-animation-squares
+
+$loading-animation-squares: () !default;
+$loading-animation-squares: map-deep-merge(
+	(
+		display: block,
+		height: 1em,
+		margin-left: auto,
+		margin-right: auto,
+		position: relative,
+		text-align: left,
+		vertical-align: middle,
+		width: 1em,
+		before: (
+			animation: loading-animation-squares-box-1 2.4s ease-in-out infinite,
+			background-color: currentColor,
+			border-radius: 0.2em,
+			content: '',
+			display: block,
+			font-size: 0.3125em,
+			height: 1em,
+			left: 0,
+			opacity: 0.4,
+			position: absolute,
+			top: 0,
+			transform: scale(1),
+			width: 1em,
+		),
+		after: (
+			animation: loading-animation-squares-box-2 2.4s ease-in-out infinite,
+			background-color: currentColor,
+			border-radius: 0.2em,
+			content: '',
+			display: block,
+			font-size: 0.3125em,
+			height: 1em,
+			left: calc(100% - 1.5em),
+			opacity: 1,
+			position: absolute,
+			top: calc(100% - 1.5em),
+			transform: scale(2),
+			width: 1em,
+		),
+	),
+	$loading-animation-squares
+);
+
+// Loading Animation Sizes
+
+$loading-animation-sizes: () !default;
+$loading-animation-sizes: map-deep-merge(
+	(
+		'%loading-animation-base-sm': (
+			before: (
+				border-radius: 50%,
+				box-shadow: inset 0 0 0 0.1351em $cds-border-subtle-01,
+				content: '',
+				height: 100%,
+				left: 0,
+				position: absolute,
+				top: 0,
+				transform: rotate(-65deg),
+				width: 100%,
+			),
+			after: (
+				border-bottom-color: transparent,
+			),
+		),
+		loading-animation-xs: (
+			font-size: map-get($font-scale, 1),
+		),
+		loading-animation-sm: (
+			font-size: $loading-icon-font-size-sm,
+		),
+		loading-animation-md: (
+			font-size: 2rem,
+		),
+		loading-animation-lg: (
+			font-size: 4rem,
+			after: (
+				border-width: 6px,
+			),
+		),
+	),
+	$loading-animation-sizes
+);
+
+// Loading Animation Variants
+
+$loading-animation-light: () !default;
+$loading-animation-light: map-deep-merge(
+	(
+		color: $cds-border-inverse,
+	),
+	$loading-animation-light
+);
+
+$loading-animation-palette: () !default;
+$loading-animation-palette: map-deep-merge(
+	(
+		'%loading-animation-primary': (
+			color: $cds-interactive,
+		),
+		loading-animation-primary: (
+			color: $cds-interactive,
+		),
+		'%loading-animation-secondary': (
+			color: $cds-border-subtle-01,
+		),
+		loading-animation-secondary: (
+			color: $cds-border-subtle-01,
+		),
+		'%loading-animation-light': $loading-animation-light,
+		loading-animation-light: $loading-animation-light,
+	),
+	$loading-animation-palette
+);

@@ -1,0 +1,343 @@
+$sidebar-padding-bottom: 1rem !default; // 16px
+$sidebar-padding-left: 1rem !default; // 16px
+$sidebar-padding-right: 1rem !default; // 16px
+$sidebar-padding-top: 1rem !default; // 16px
+
+// .sidebar-header .component-title
+
+$sidebar-header-component-title: () !default;
+$sidebar-header-component-title: map-deep-merge(
+	(
+		color: $cds-text-secondary,
+		font-size: 1.25rem,
+		font-weight: $font-weight-semi-bold,
+		overflow-wrap: break-word,
+		href: (
+			color: $cds-text-secondary,
+			hover: (
+				color: $cds-text-primary,
+			),
+		),
+	),
+	$sidebar-header-component-title
+);
+
+// .sidebar-header .component-subtitle
+
+$sidebar-header-component-subtitle: () !default;
+$sidebar-header-component-subtitle: map-deep-merge(
+	(
+		color: $cds-text-secondary,
+		font-size: 0.75rem,
+		font-weight: $font-weight-normal,
+		margin-bottom: 0,
+		overflow-wrap: break-word,
+		hover: (
+			color: $cds-text-primary,
+		),
+	),
+	$sidebar-header-component-subtitle
+);
+
+// Sidebar DT
+
+$sidebar-dt: () !default;
+$sidebar-dt: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		font-weight: $font-weight-semi-bold,
+		margin-bottom: 0.25rem,
+		text-transform: uppercase,
+	),
+	$sidebar-dt
+);
+
+// Sidebar DD
+
+$sidebar-dd: () !default;
+$sidebar-dd: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		margin-bottom: 0.75rem,
+	),
+	$sidebar-dd
+);
+
+// Sidebar Panel
+
+$sidebar-panel-margin-bottom: 1rem !default; // 16px
+
+// Sidebar List Group
+
+$sidebar-list-group-bg: transparent !default;
+$sidebar-list-group-border-color: $cds-border-subtle-01 !default;
+$sidebar-list-group-font-size: 0.875rem !default; // 14px
+$sidebar-list-group-type: list-group-flush !default;
+
+$sidebar-list-group-item-padding: 0 !default;
+
+$sidebar-list-group-autofit-col-padding-x: 0.5rem !default; // 8px
+$sidebar-list-group-autofit-col-padding-y: 1rem !default; // 16px
+
+$sidebar-list-group-sticker-size: () !default;
+$sidebar-list-group-sticker-size: map-deep-merge(
+	if(variable-exists(sticker-sm), $sticker-sm, ()),
+	$sidebar-list-group-sticker-size
+);
+
+$sidebar: () !default;
+$sidebar: map-deep-merge(
+	(
+		height: 100%,
+		overflow: auto,
+		-webkit-overflow-scrolling: touch,
+		focus: (
+			box-shadow: $component-focus-inset-box-shadow,
+			outline: 0,
+		),
+		sidebar-header: (
+			padding-bottom: $sidebar-padding-bottom,
+			padding-left: $sidebar-padding-left,
+			padding-right: $sidebar-padding-right,
+			padding-top: $sidebar-padding-top,
+			component-title: $sidebar-header-component-title,
+			component-subtitle: $sidebar-header-component-subtitle,
+		),
+		sidebar-footer: (
+			padding-bottom: $sidebar-padding-bottom,
+			padding-left: $sidebar-padding-left,
+			padding-right: $sidebar-padding-right,
+			padding-top: $sidebar-padding-top,
+		),
+		sidebar-body: (
+			overflow: auto,
+			-webkit-overflow-scrolling: touch,
+			padding-bottom: $sidebar-padding-bottom,
+			padding-left: $sidebar-padding-left,
+			padding-right: $sidebar-padding-right,
+			padding-top: $sidebar-padding-top,
+		),
+		sidebar-list-group: (
+			display: flex,
+			flex-direction: column,
+			font-size: $sidebar-list-group-font-size,
+			margin-bottom: 0,
+			padding-left: 0,
+			list-group-item: (
+				background-color: $sidebar-list-group-bg,
+				border-color: $sidebar-list-group-border-color,
+				padding: $sidebar-list-group-item-padding,
+			),
+			sticker: $sidebar-list-group-sticker-size,
+		),
+		sidebar-panel: (
+			margin-bottom: $sidebar-panel-margin-bottom,
+			position: relative,
+		),
+		sidebar-dt: $sidebar-dt,
+		sidebar-dd: $sidebar-dd,
+	),
+	$sidebar
+);
+
+// Sidebar Light
+
+$sidebar-light-navigation-bar: () !default;
+$sidebar-light-navigation-bar: map-deep-merge(
+	(
+		background-color: $cds-background,
+		border-color: $cds-border-subtle-01,
+		navbar-nav: (
+			nav-link: (
+				color: $cds-text-secondary,
+				hover: (
+					color: $cds-text-primary,
+				),
+				active: (
+					color: $cds-text-primary,
+				),
+				disabled: (
+					color: $cds-text-disabled,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-nav: (
+						nav-link: (
+							active-class: (
+								after: (
+									background-color: $cds-border-interactive,
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+	),
+	$sidebar-light-navigation-bar
+);
+
+$sidebar-light: () !default;
+$sidebar-light: map-deep-merge(
+	(
+		background-color: $cds-background,
+		border-color: $cds-border-subtle-01,
+		border-left-width: 0px,
+		box-shadow: c-unset,
+		color: $cds-text-secondary,
+		sidenav-start: (
+			box-shadow: c-unset,
+			focus: (
+				box-shadow: c-unset,
+			),
+		),
+		sidebar-dt: (
+			color: $cds-text-secondary,
+		),
+		sidebar-dd: (
+			href: (
+				color: $cds-text-secondary,
+			),
+		),
+		sidebar-panel: (
+			background-color: $cds-text-secondary,
+		),
+		sidebar-list-group: (
+			list-group-title: (
+				font-size: 1rem,
+				href: (
+					color: $cds-text-secondary,
+				),
+			),
+		),
+		panel-unstyled: (
+			header: (
+				link: (
+					focus: (
+						box-shadow: $component-focus-inset-box-shadow,
+					),
+				),
+			),
+		),
+		component-navigation-bar: $sidebar-light-navigation-bar,
+	),
+	$sidebar-light
+);
+
+// Sidebar Dark
+
+$sidebar-dark: () !default;
+$sidebar-dark: map-deep-merge(
+	(
+		background-color: $dark,
+		color: $white,
+		sidebar-header: (
+			component-title: (
+				color: inherit,
+				href: (
+					color: inherit,
+				),
+			),
+			component-subtitle: (
+				color: inherit,
+				href: (
+					color: inherit,
+				),
+			),
+		),
+		close: (
+			color: $secondary-l1,
+			hover: (
+				color: $white,
+			),
+		),
+		nav-nested: (
+			nav-link: (
+				border-radius: $border-radius,
+				color: $secondary-l1,
+				transition: box-shadow 0.15s ease-in-out,
+				hover: (
+					color: $white,
+				),
+				focus: (
+					box-shadow: $component-focus-box-shadow,
+					outline: 0,
+				),
+				active: (
+					color: $white,
+				),
+				disabled: (
+					box-shadow: none,
+					color: $secondary-l1,
+					opacity: 0.65,
+					active: (
+						pointer-events: none,
+					),
+				),
+			),
+		),
+	),
+	$sidebar-dark
+);
+
+$sidebar-palette: () !default;
+$sidebar-palette: map-deep-merge(
+	(
+		sidebar-light: $sidebar-light,
+		sidebar-dark: $sidebar-dark,
+		sidebar-dark-l2: (
+			background-color: $dark-l2,
+			color: $white,
+			sidebar-header: (
+				component-title: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+				component-subtitle: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+			),
+			close: (
+				color: $secondary-l1,
+				hover: (
+					color: $white,
+				),
+			),
+			nav-nested: (
+				nav-link: (
+					border-radius: $border-radius,
+					color: $secondary-l1,
+					transition: box-shadow 0.15s ease-in-out,
+					hover: (
+						color: $white,
+					),
+					focus: (
+						box-shadow: $component-focus-box-shadow,
+						outline: 0,
+					),
+					active: (
+						color: $white,
+					),
+					disabled: (
+						box-shadow: none,
+						color: $secondary-l1,
+						opacity: 0.65,
+						active: (
+							pointer-events: none,
+						),
+					),
+				),
+			),
+		),
+	),
+	$sidebar-palette
+);

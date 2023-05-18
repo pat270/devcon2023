@@ -1,0 +1,17 @@
+.info-panel {
+	.sidebar > .sidenav-close {
+		float: right;
+		margin: 16px 16px 0 8px;
+
+		+ .info-panel-content {
+			.sidebar-header > .autofit-row {
+				width: auto;
+			}
+		}
+	}
+
+	.sidenav-close {
+		float: none;
+		margin: 0;
+	}
+}

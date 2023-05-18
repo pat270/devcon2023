@@ -1,0 +1,69 @@
+$management-bar-light: () !default;
+$management-bar-light: map-deep-merge(
+	(
+		background-color: transparent !important,
+		navbar-nav: (
+			nav-link: (
+				color: $cds-text-secondary !important,
+				font-weight: $font-weight-normal !important,
+				hover: (
+					background-color: $cds-background-hover !important,
+					color: $cds-text-primary !important,
+				),
+				focus: (
+					color: $cds-text-primary !important,
+					box-shadow: $component-focus-inset-box-shadow-2 !important,
+				),
+				active: (
+					background-color: $cds-background-active !important,
+					box-shadow: none !important,
+					color: $cds-text-primary !important,
+				),
+				disabled: (
+					background-color: transparent !important,
+					color: $cds-text-disabled !important,
+					opacity: 1,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-light
+);
+
+$management-bar-primary: () !default;
+$management-bar-primary: map-deep-merge(
+	(
+		background-color: transparent !important,
+		border-color: $cds-border-subtle-01 !important,
+		color: $cds-text-secondary !important,
+		navbar-nav: (
+			nav-link: (
+				color: $cds-text-secondary !important,
+				font-weight: $font-weight-normal !important,
+				hover: (
+					background-color: $cds-background-hover !important,
+					color: $cds-text-primary !important,
+				),
+				focus: (
+					color: $cds-text-primary !important,
+					box-shadow: $component-focus-inset-box-shadow-2 !important,
+				),
+				active: (
+					background-color: $cds-background-active !important,
+					box-shadow: none !important,
+					color: $cds-text-primary !important,
+				),
+				disabled: (
+					background-color: transparent !important,
+					color: $cds-text-disabled !important,
+					opacity: 1,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-primary
+);
