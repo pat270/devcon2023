@@ -1,0 +1,10 @@
+{
+	"dependencies": {
+	},
+	"liferayDesignPack": {
+		"baseTheme": "unstyled"
+	},
+	"main": "package.json",
+	"name": "@liferay/carbon-v11-direct-css-copy",
+	"version": "0.0.0"
+}

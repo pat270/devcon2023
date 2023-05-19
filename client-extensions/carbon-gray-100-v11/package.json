@@ -6,6 +6,6 @@
 		"baseTheme": "styled"
 	},
 	"main": "package.json",
-	"name": "@liferay/carbon-gray-100-v11",
+	"name": "@liferay/carbon-gray-v11-direct-css-copy",
 	"version": "0.0.0"
 }
