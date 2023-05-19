@@ -2,6 +2,7 @@
     "private": true,
     "workspaces": {
         "packages": [
+            "client-extensions/carbon-v11-direct-css-copy",
             "client-extensions/carbon-gray-100-v11"
         ]
     }
