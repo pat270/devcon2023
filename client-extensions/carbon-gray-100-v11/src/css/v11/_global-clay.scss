@@ -370,22 +370,28 @@ $font-family-base: $font-family-sans-serif !default;
 $font-scale: () !default;
 $font-scale: map-merge(
 	(
-		1: 0.625rem,
-		2: 0.75rem,
-		3: 0.875rem,
-		4: 1rem,
-		5: 1.125rem,
-		6: 1.25rem,
-		7: 1.5rem,
-		8: 1.75rem,
-		9: 2rem,
-		10: 2.25rem,
-		11: 2.5rem,
+		1: 0.7rem,
+		2: 0.875rem,
+		3: 1rem,
+		4: 1.125rem,
+		5: 1.25rem,
+		6: 1.5rem,
+		7: 1.75rem,
+		8: 2rem,
+		9: 2.25rem,
+		10: 2.625rem,
+		11: 3rem,
+		12: 3.375rem,
+		13: 3.75rem,
+		14: 4.25rem,
+		15: 4.75rem,
+		16: 5.25rem,
+		17: 5.75rem,
 	),
 	$font-scale
 );
 
-$font-size-base: map-get($font-scale, 4) !default;
+$font-size-base: map-get($font-scale, 2) !default;
 $font-size-lg: map-get($font-scale, 6) !default;
 $font-size-sm: map-get($font-scale, 3) !default;
 
@@ -395,7 +401,7 @@ $font-size-lg-mobile: $font-size-lg !default;
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
-$font-weight-semi-bold: 500 !default;
+$font-weight-semi-bold: 600 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 
@@ -403,9 +409,29 @@ $font-weight-base: $font-weight-normal !default;
 
 $line-height-base: 1.125 !default;
 
+// Headings h1, h2, h3, h4, h5, h6
+
+$headings-margin-bottom: 1.5rem !default;
+$headings-font-family: null !default;
+$headings-font-weight: $font-weight-light !default;
+$headings-line-height: 1.199 !default;
+$headings-color: null !default;
+
+$headings: () !default;
+$headings: map-deep-merge(
+	(
+		color: $headings-color,
+		font-family: $headings-font-family,
+		font-weight: $headings-font-weight,
+		line-height: $headings-line-height,
+		margin-bottom: $headings-margin-bottom,
+	),
+	$headings
+);
+
 // h1, .h1
 
-$h1-font-size: calc(#{$font-size-base} * 2.5) !default;
+$h1-font-size: map-get($font-scale, 10) !default;
 $h1-font-size-mobile: null !default;
 
 $h1: () !default;
@@ -423,13 +449,14 @@ $h1: map-deep-merge(
 
 // h2, .h2
 
-$h2-font-size: calc(#{$font-size-base} * 2) !default;
+$h2-font-size: map-get($font-scale, 8) !default;
 $h2-font-size-mobile: null !default;
 
 $h2: () !default;
 $h2: map-deep-merge(
 	(
 		font-size: $h2-font-size,
+		line-height: 1.25,
 		media-breakpoint-down: (
 			sm: (
 				font-size: $h2-font-size-mobile,
@@ -441,13 +468,15 @@ $h2: map-deep-merge(
 
 // h3, .h3
 
-$h3-font-size: calc(#{$font-size-base} * 1.75) !default;
+$h3-font-size: map-get($font-scale, 7) !default;
 $h3-font-size-mobile: null !default;
 
 $h3: () !default;
 $h3: map-deep-merge(
 	(
+		font-weight: $font-weight-normal,
 		font-size: $h3-font-size,
+		line-height: 1.28572,
 		media-breakpoint-down: (
 			sm: (
 				font-size: $h3-font-size-mobile,
@@ -459,13 +488,15 @@ $h3: map-deep-merge(
 
 // h4, .h4
 
-$h4-font-size: calc(#{$font-size-base} * 1.5) !default;
+$h4-font-size: map-get($font-scale, 5) !default;
 $h4-font-size-mobile: null !default;
 
 $h4: () !default;
 $h4: map-deep-merge(
 	(
+		font-weight: $font-weight-normal,
 		font-size: $h4-font-size,
+		line-height: 1.4,
 		media-breakpoint-down: (
 			sm: (
 				font-size: $h4-font-size-mobile,
@@ -477,13 +508,15 @@ $h4: map-deep-merge(
 
 // h5, .h5
 
-$h5-font-size: calc(#{$font-size-base} * 1.25) !default;
+$h5-font-size: map-get($font-scale, 3) !default;
 $h5-font-size-mobile: null !default;
 
 $h5: () !default;
 $h5: map-deep-merge(
 	(
+		font-weight: $font-weight-semi-bold,
 		font-size: $h5-font-size,
+		line-height: 1.5,
 		media-breakpoint-down: (
 			sm: (
 				font-size: $h5-font-size-mobile,
@@ -495,13 +528,15 @@ $h5: map-deep-merge(
 
 // h6, .h6
 
-$h6-font-size: $font-size-base !default;
+$h6-font-size: map-get($font-scale, 2) !default;
 $h6-font-size-mobile: null !default;
 
 $h6: () !default;
 $h6: map-deep-merge(
 	(
+		font-weight: $font-weight-semi-bold,
 		font-size: $h6-font-size,
+		line-height: 1.42857,
 		media-breakpoint-down: (
 			sm: (
 				font-size: $h6-font-size-mobile,
@@ -509,26 +544,6 @@ $h6: map-deep-merge(
 		),
 	),
 	$h6
-);
-
-// Headings h1-h6
-
-$headings-margin-bottom: 0.5rem !default;
-$headings-font-family: null !default;
-$headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
-$headings-color: null !default;
-
-$headings: () !default;
-$headings: map-deep-merge(
-	(
-		color: $headings-color,
-		font-family: $headings-font-family,
-		font-weight: $headings-font-weight,
-		line-height: $headings-line-height,
-		margin-bottom: $headings-margin-bottom,
-	),
-	$headings
 );
 
 // Body
@@ -584,7 +599,7 @@ $link: map-deep-merge(
 			text-decoration: underline,
 		),
 		focus: (
-			box-shadow: $component-focus-box-shadow,
+			box-shadow: $component-focus-inset-box-shadow,
 			color: $cds-link-primary,
 			outline: 0,
 		),

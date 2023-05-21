@@ -361,23 +361,23 @@ $nav-tabs-font-size: 0.875rem !default; // 14px
 
 // Nav Tabs Link
 
-$nav-tabs-border-color: transparent transparent $cds-border-subtle-01 transparent !default;
-$nav-tabs-border-width: 0 !default;
+$nav-tabs-border-color: $cds-border-subtle-01 !default;
+$nav-tabs-border-width: 0 1px 0 0 !default;
 $nav-tabs-border-radius: 0 !default;
 
 $nav-tabs-link-color: $cds-text-secondary !default;
 $nav-tabs-link-padding-x: null !default;
-$nav-tabs-link-padding-y: 0.6875rem !default;
+$nav-tabs-link-padding-y: 0.9375rem !default;
 
 $nav-tabs-link-hover-border-color: c-unset !default;
 
-$nav-tabs-link-active-bg: c-unset !default;
-$nav-tabs-link-active-border-color: transparent transparent $cds-border-interactive transparent !default;
+$nav-tabs-link-active-bg: $cds-layer-01 !default;
+$nav-tabs-link-active-border-color: transparent !default;
 $nav-tabs-link-active-color: $cds-text-primary !default;
 
 $nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-bg: c-unset !default;
-$nav-tabs-link-show-border-color: transparent transparent $cds-border-interactive transparent !default;
+$nav-tabs-link-show-border-color: transparent !default;
 
 // .nav-tabs .nav-link[aria-expanded="true"]
 
@@ -397,13 +397,14 @@ $nav-tabs-link-show: map-deep-merge(
 $nav-tabs-link: () !default;
 $nav-tabs-link: map-deep-merge(
 	(
-		border-color: transparent,
+		background-color: $cds-layer-accent-01,
+		border-color: $nav-tabs-border-color,
 		border-radius: $nav-tabs-border-radius,
 		border-style: solid,
-		border-width: 0 1px 0 0,
-		box-shadow: inset 0 -2px 0 0 $cds-border-subtle-01,
+		border-width: $nav-tabs-border-width,
 		color: $nav-tabs-link-color,
 		font-weight: $font-weight-normal,
+		letter-spacing: 0.16px,
 		line-height: 1.125rem,
 		padding-bottom: $nav-tabs-link-padding-y,
 		padding-left: $nav-tabs-link-padding-x,
@@ -412,6 +413,7 @@ $nav-tabs-link: map-deep-merge(
 		transition: box-shadow 0.15s ease-in-out,
 		white-space: nowrap,
 		hover: (
+			background-color: $cds-layer-accent-hover-01,
 			border-color: c-unset,
 			color: $cds-text-primary,
 		),
@@ -422,21 +424,23 @@ $nav-tabs-link: map-deep-merge(
 		),
 		active: (
 			background-color: $nav-tabs-link-active-bg,
-			border-color: c-unset,
+			border-color: transparent,
 			color: $nav-tabs-link-active-color,
-		),
-		active-class: (
-			box-shadow: inset 0 -2px 0 0 $cds-border-interactive,
 			focus: (
 				box-shadow: $component-focus-inset-box-shadow,
 			),
 		),
+		active-class: (
+			box-shadow: #{inset 0 3px 0 0 $cds-border-interactive, -1px 0 0 0 $nav-tabs-link-active-bg},
+			font-weight: $font-weight-semi-bold,
+			letter-spacing: 0,
+		),
 		show: $nav-tabs-link-show,
 		disabled: (
-			background-color: c-unset,
+			background-color: $cds-button-disabled,
 			border-color: c-unset,
-			box-shadow: inset 0 -2px 0 0 $cds-border-subtle-01,
-			color: $nav-link-disabled-color,
+			box-shadow: none,
+			color: $cds-text-on-color-disabled,
 			active: (
 				box-shadow: c-unset,
 			),
@@ -483,35 +487,6 @@ $nav-tabs: map-deep-merge(
 );
 
 $nav-tabs-light: () !default;
-$nav-tabs-light: map-deep-merge(
-	(
-		background-color: $cds-layer-accent-01,
-		nav-link: (
-			border-color: c-unset,
-			border-width: c-unset,
-			box-shadow: c-unset,
-			active: (
-				background-color: $cds-layer-01,
-				border-color: c-unset,
-			),
-			active-class: (
-				box-shadow: inset 0 2px 0 0 $cds-border-interactive,
-			),
-			disabled: (
-				background-color: transparent,
-				border-color: c-unset,
-				box-shadow: c-unset,
-			),
-		),
-		tab-content: (
-			tab-pane: (
-				background-color: c-unset,
-				border-radius: c-unset,
-			),
-		),
-	),
-	$nav-tabs-light
-);
 
 // Nav Pills
 

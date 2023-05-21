@@ -1,18 +1,25 @@
+// @deprecated as of v3.x with no replacement, use `$navigation-bar-base` instead
+
 $navigation-bar-size: () !default;
 $navigation-bar-size: map-deep-merge(
 	(
 		scaling-navbar: false,
-		border-bottom-width: 0.0625rem,
+		border-bottom-width: 0px,
+		border-top-width: 1px,
 		font-size:
 			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 3rem,
-		padding-x: 0,
-		padding-y: 0,
+		margin-bottom: 0px,
+		margin-top: 0px,
+		padding-x: 0px,
+		padding-y: 0px,
 		link-padding-x: 1rem,
+		link-padding-y: 1rem,
 		collapse-dropdown-item-padding-x-mobile: 1rem,
 		collapse-dropdown-item-padding-y-mobile: 0.71875rem,
 		nav-item-dropdown-margin-top: 0,
-		active-border-bottom-width: 0.25rem,
+		active-border-bottom-width: 0,
+		active-border-top-width: 0.1875rem,
 	),
 	$navigation-bar-size
 );
@@ -29,7 +36,17 @@ $navigation-bar-base: map-deep-merge(
 			),
 		),
 		media-breakpoint-down: (),
-		media-breakpoint-up: (),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-nav: (
+						nav-link: (
+							padding-right: 3rem,
+						),
+					),
+				),
+			),
+		),
 	),
 	$navigation-bar-base
 );
@@ -38,15 +55,17 @@ $navigation-bar-light: () !default;
 $navigation-bar-light: map-deep-merge(
 	(
 		background-color: c-unset,
+		border-color: $cds-border-subtle-01,
 		navbar-nav: (
 			nav-link: (
 				color: $cds-text-secondary,
+				padding-right: 3rem,
 				hover: (
 					background-color: $cds-background-hover,
 					color: $cds-text-primary,
 				),
 				active: (
-					background-color: $cds-background-active,
+					background-color: $cds-layer-02,
 					color: $cds-text-primary,
 				),
 				disabled: (
@@ -88,6 +107,9 @@ $navigation-bar-light: map-deep-merge(
 								active-class: (
 									after: (
 										background-color: $cds-border-interactive,
+										bottom: auto,
+										height: 3px,
+										top: 0,
 									),
 								),
 							),
@@ -103,19 +125,34 @@ $navigation-bar-light: map-deep-merge(
 $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-deep-merge(
 	(
-		background-color: $secondary,
-		color: $white,
+		background-color: transparent,
+		border-color: $cds-border-inverse,
+		border-radius: 6px,
+		border-width: 1px,
+		color: $cds-text-secondary,
+		display: inline-flex,
 		navbar-nav: (
 			nav-link: (
-				color: rgba(255, 255, 255, 0.65),
+				color: inherit,
 				hover: (
-					color: rgba(255, 255, 255, 0.9),
+					background-color: $cds-background-hover,
+					color: $cds-text-primary,
+				),
+				focus: (
+					background-color: transparent,
+					color: $cds-text-secondary,
 				),
 				active: (
-					color: rgba(255, 255, 255, 0.9),
+					background-color: $cds-background-inverse,
+					color: $cds-text-inverse,
+				),
+				active-class: (
+					background-color: $cds-background-inverse,
+					color: $cds-text-inverse,
 				),
 				disabled: (
-					color: rgba(255, 255, 255, 0.25),
+					background-color: transparent,
+					color: $cds-text-disabled,
 					opacity: 1,
 				),
 			),
@@ -149,7 +186,16 @@ $navigation-bar-secondary: map-deep-merge(
 				),
 			),
 		),
-		media-breakpoint-up: (),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					container-fluid: (
+						padding-left: 0,
+						padding-right: 0,
+					),
+				),
+			),
+		),
 	),
 	$navigation-bar-secondary
 );
