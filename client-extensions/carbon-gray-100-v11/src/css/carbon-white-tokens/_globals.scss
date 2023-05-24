@@ -1,0 +1,200 @@
+// Background Tokens
+
+$cds-background: $cds-white !default;
+$cds-background-active: rgba($cds-gray-50, 0.5) !default;
+$cds-background-hover: rgba($cds-gray-50, 0.12) !default;
+$cds-background-selected: rgba($cds-gray-50, 0.20) !default;
+$cds-background-selected-hover: rgba($cds-gray-50, 0.32) !default;
+$cds-background-brand: $cds-blue-60 !default;
+$cds-background-inverse: $cds-gray-80 !default;
+$cds-background-inverse-hover: $cds-gray-80-hover !default;
+
+// Layer Tokens
+
+$cds-layer-01: $cds-gray-10 !default;
+$cds-layer-02: $cds-white !default;
+$cds-layer-03: $cds-gray-10 !default;
+$cds-layer-hover-01: $cds-gray-10-hover !default;
+$cds-layer-hover-02: $cds-gray-10-hover !default;
+$cds-layer-hover-03: $cds-gray-10-hover !default;
+$cds-layer-active-01: $cds-gray-30 !default;
+$cds-layer-active-02: $cds-gray-30 !default;
+$cds-layer-active-03: $cds-gray-30 !default;
+$cds-layer-selected-01: $cds-gray-20 !default;
+$cds-layer-selected-02: $cds-gray-20 !default;
+$cds-layer-selected-03: $cds-gray-20 !default;
+$cds-layer-selected-hover-01: $cds-gray-20-hover !default;
+$cds-layer-selected-hover-02: $cds-gray-20-hover !default;
+$cds-layer-selected-hover-03: $cds-gray-20-hover !default;
+$cds-layer-selected-disabled: $cds-gray-50 !default;
+
+// Layer Accent Tokens
+
+$cds-layer-accent-01: $cds-gray-20 !default;
+$cds-layer-accent-02: $cds-gray-20 !default;
+$cds-layer-accent-03: $cds-gray-20 !default;
+$cds-layer-accent-hover-01: $cds-gray-20-hover !default;
+$cds-layer-accent-hover-02: $cds-gray-20-hover !default;
+$cds-layer-accent-hover-03: $cds-gray-20-hover !default;
+$cds-layer-accent-active-01: $cds-gray-40 !default;
+$cds-layer-accent-active-02: $cds-gray-40 !default;
+$cds-layer-accent-active-03: $cds-gray-40 !default;
+
+// Field Tokens
+
+$cds-field-01: $cds-gray-10 !default;
+$cds-field-02: $cds-white !default;
+$cds-field-03: $cds-white !default;
+$cds-field-hover-01: $cds-gray-10-hover !default;
+$cds-field-hover-02: $cds-gray-10-hover !default;
+$cds-field-hover-03: $cds-gray-10-hover !default;
+
+// Border Tokens
+
+$cds-border-subtle-00: $cds-gray-20 !default;
+$cds-border-subtle-01: $cds-gray-20 !default;
+$cds-border-subtle-02: $cds-gray-20 !default;
+$cds-border-subtle-03: $cds-gray-20 !default;
+$cds-border-subtle-selected-01: $cds-gray-30 !default;
+$cds-border-subtle-selected-02: $cds-gray-30 !default;
+$cds-border-subtle-selected-03: $cds-gray-30 !default;
+$cds-border-strong-01: $cds-gray-50 !default;
+$cds-border-strong-02: $cds-gray-50 !default;
+$cds-border-strong-03: $cds-gray-50 !default;
+$cds-border-inverse: $cds-gray-100 !default;
+$cds-border-interactive: $cds-blue-60 !default;
+$cds-border-disabled: $cds-gray-30 !default;
+
+// Text Tokens
+
+$cds-text-primary: $cds-gray-100 !default;
+$cds-text-secondary: $cds-gray-70 !default;
+$cds-text-placeholder: $cds-gray-40 !default;
+$cds-text-on-color: $cds-white !default;
+$cds-text-helper: $cds-gray-60 !default;
+$cds-text-error: $cds-red-60 !default;
+$cds-text-inverse: $cds-white !default;
+$cds-text-disabled: rgba($cds-gray-100, 0.25) !default;
+$cds-text-on-color-disabled: $cds-gray-50 !default;
+
+// Link Tokens
+
+$cds-link-primary: $cds-blue-60 !default;
+$cds-link-primary-hover: $cds-blue-70 !default;
+$cds-link-secondary: $cds-blue-70 !default;
+$cds-link-inverse: $cds-blue-40 !default;
+$cds-link-visited: $cds-purple-60 !default;
+
+// Icon Tokens
+
+$cds-icon-primary: $cds-gray-100 !default;
+$cds-icon-secondary: $cds-gray-70 !default;
+$cds-icon-on-color: $cds-white !default;
+$cds-icon-inverse: $cds-white !default;
+$cds-icon-on-color-disabled: $cds-gray-50 !default;
+$cds-icon-disabled: rgba($cds-gray-100, 0.25) !default;
+
+// Support Tokens
+
+$cds-support-error: $cds-red-60 !default;
+$cds-support-success: $cds-green-60 !default;
+$cds-support-warning: $cds-yellow-30 !default;
+$cds-support-info: $cds-blue-70 !default;
+$cds-support-error-inverse: $cds-red-50 !default;
+$cds-support-success-inverse: $cds-green-40 !default;
+$cds-support-warning-inverse: $cds-yellow-30 !default;
+$cds-support-info-inverse: $cds-blue-50 !default;
+$cds-support-caution-major: $cds-orange-40 !default;
+$cds-support-caution-minor: $cds-yellow-30 !default;
+$cds-support-undefined: $cds-purple-60 !default;
+
+// Focus Tokens
+
+$cds-focus: $cds-blue-60 !default;
+$cds-focus-inset: $cds-white !default;
+$cds-focus-inverse: $cds-white !default;
+
+// Miscellaneous Tokens
+
+$cds-interactive: $cds-blue-60 !default;
+$cds-highlight: $cds-blue-20 !default;
+$cds-overlay: rgba($cds-gray-100, 0.5) !default;
+$cds-skeleton-background: $cds-gray-10-hover !default;
+$cds-skeleton-element: $cds-gray-30 !default;
+$cds-toggle-off: $cds-gray-50 !default;
+
+// Button Tokens
+
+$cds-button-primary: $cds-blue-60 !default;
+$cds-button-primary-hover: $cds-blue-60-hover !default;
+$cds-button-primary-active: $cds-blue-80 !default;
+$cds-button-secondary: $cds-gray-80 !default;
+$cds-button-secondary-hover: $cds-gray-80-hover !default;
+$cds-button-secondary-active: $cds-gray-60 !default;
+$cds-button-tertiary: $cds-blue-60 !default;
+$cds-button-tertiary-hover: $cds-blue-60-hover !default;
+$cds-button-tertiary-active: $cds-gray-80 !default;
+$cds-button-danger-primary: $cds-red-60 !default;
+$cds-button-danger-secondary: $cds-red-60 !default;
+$cds-button-danger-hover: $cds-red-60-hover !default;
+$cds-button-danger-active: $cds-red-80 !default;
+$cds-button-separator: $cds-gray-20 !default;
+$cds-button-disabled: $cds-gray-30 !default;
+
+// Tag Colors Tokens
+
+$cds-blue-tag-background: $cds-blue-20 !default;
+$cds-blue-tag-text: $cds-blue-70 !default;
+$cds-blue-tag-hover: $cds-blue-20-hover !default;
+
+$cds-cyan-tag-background: $cds-cyan-20 !default;
+$cds-cyan-tag-text: $cds-cyan-70 !default;
+$cds-cyan-tag-hover: $cds-cyan-20-hover !default;
+
+$cds-green-tag-background: $cds-green-20 !default;
+$cds-green-tag-text: $cds-green-70 !default;
+$cds-green-tag-hover: $cds-green-20-hover !default;
+
+$cds-magenta-tag-background: $cds-magenta-20 !default;
+$cds-magenta-tag-text: $cds-magenta-70 !default;
+$cds-magenta-tag-hover: $cds-magenta-20-hover !default;
+
+$cds-purple-tag-background: $cds-purple-20 !default;
+$cds-purple-tag-text: $cds-purple-70 !default;
+$cds-purple-tag-hover: $cds-purple-20-hover !default;
+
+$cds-red-tag-background: $cds-red-20 !default;
+$cds-red-tag-text: $cds-red-70 !default;
+$cds-red-tag-hover: $cds-red-20-hover !default;
+
+$cds-teal-tag-background: $cds-teal-20 !default;
+$cds-teal-tag-text: $cds-teal-70 !default;
+$cds-teal-tag-hover: $cds-teal-20-hover !default;
+
+$cds-gray-tag-background: $cds-gray-20 !default;
+$cds-gray-tag-text: $cds-gray-100 !default;
+$cds-gray-tag-hover: $cds-gray-20-hover !default;
+
+$cds-cool-gray-tag-background: $cds-cool-gray-20 !default;
+$cds-cool-gray-tag-text: $cds-cool-gray-100 !default;
+$cds-cool-gray-tag-hover: $cds-cool-gray-20-hover !default;
+
+$cds-warm-gray-tag-background: $cds-warm-gray-20 !default;
+$cds-warm-gray-tag-text: $cds-warm-gray-100 !default;
+$cds-warm-gray-tag-hover: $cds-warm-gray-20-hover !default;
+
+// Spacing Block Specification
+
+$cds-spacing-01: 0.125rem !default;
+$cds-spacing-02: 0.25rem !default;
+$cds-spacing-03: 0.5rem !default;
+$cds-spacing-04: 0.75rem !default;
+$cds-spacing-05: 1rem !default;
+$cds-spacing-06: 1.5rem !default;
+$cds-spacing-07: 2rem !default;
+$cds-spacing-08: 2.5rem !default;
+$cds-spacing-09: 3rem !default;
+$cds-spacing-10: 4rem !default;
+$cds-spacing-11: 5rem !default;
+$cds-spacing-12: 6rem !default;
+$cds-spacing-13: 10rem !default;

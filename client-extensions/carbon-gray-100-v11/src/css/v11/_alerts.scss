@@ -169,10 +169,12 @@ $alert-link-hover-decoration: none !default;
 $alert-link: () !default;
 $alert-link: map-deep-merge(
 	(
+		merge: false,
 		color: $cds-link-inverse,
 		font-weight: $alert-link-font-weight,
 		text-decoration: $alert-link-decoration,
 		hover: (
+			color: $cds-link-inverse,
 			text-decoration: $alert-link-hover-decoration,
 		),
 		focus: (
@@ -231,7 +233,7 @@ $alert-dismissible: map-deep-merge(
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
-$alert-fluid-border-bottom-width: 0 !default;
+$alert-fluid-border-bottom-width: 1px !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
@@ -243,7 +245,7 @@ $alert-fluid-border-right-width: 0 !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
-$alert-fluid-border-top-width: 4px !default;
+$alert-fluid-border-top-width: 0 !default;
 
 // @deprecated use the Sass map `$alert-fluid` instead
 
@@ -289,7 +291,7 @@ $alert-fluid-dismissible-container: map-merge(
 $alert-fluid-close: () !default;
 $alert-fluid-close: map-deep-merge(
 	(
-		right: c-unset,
+		right: calc(#{$grid-gutter-width * 0.5} + 0.25rem),
 	),
 	$alert-fluid-close
 );

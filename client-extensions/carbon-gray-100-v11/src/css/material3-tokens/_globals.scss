@@ -1,0 +1,666 @@
+$enable-shadows: true;
+$enable-transitions: false;
+$white: #fff;
+$black: #000;
+$blue: #4B9FFF;
+$indigo: #7785FF;
+$purple: #AF78FF;
+$pink: #FF73C3;
+$red: #FF5F5F;
+$orange: #FFB46E;
+$yellow: #FFD76E;
+$green: #9BE169;
+$teal: #50D2A0;
+$cyan: #5FC8FF;
+$grays: (
+50: #f4eff4,
+100: #e6e1e5,
+200: #c9c5ca,
+300: #aeaaae,
+400: #939094,
+500: #787579,
+600: #605d62,
+700: #484649,
+800: #313033,
+900: #1c1b1f,
+);
+$grays-50: map-get($grays, 50);
+$grays-100: map-get($grays, 100);
+$grays-200: map-get($grays, 200);
+$grays-300: map-get($grays, 300);
+$grays-400: map-get($grays, 400);
+$grays-500: map-get($grays, 500);
+$grays-600: map-get($grays, 600);
+$grays-700: map-get($grays, 700);
+$grays-800: map-get($grays, 800);
+$grays-900: map-get($grays, 900);
+$primary-map: (
+'l6': #f6edfe,
+'l5': #eadefe,
+'l4': #d0befd,
+'l3': #b69ff5,
+'l2': #9a84d9,
+'l1': #7f69bc,
+'base': #6752a2,
+'d1': #4f3a89,
+'d2': #382270,
+'d3': #21065b,
+);
+$primary-l6: map-get($primary-map, l6);
+$primary-l5: map-get($primary-map, l5);
+$primary-l4: map-get($primary-map, l4);
+$primary-l3: map-get($primary-map, l3);
+$primary-l2: map-get($primary-map, l2);
+$primary-l1: map-get($primary-map, l1);
+$primary: map-get($primary-map, base);
+$primary-d1: map-get($primary-map, d1);
+$primary-d2: map-get($primary-map, d2);
+$primary-d3: map-get($primary-map, d3);
+$secondary-map: (
+'l6': #f6edfe,
+'l5': #e8dff7,
+'l4': #ccc2db,
+'l3': #b0a7bf,
+'l2': #958da4,
+'l1': #7a7288,
+'base': #625b70,
+'d1': #4a4457,
+'d2': #332d40,
+'d3': #1d192a,
+);
+$secondary-l6: map-get($secondary-map, l6);
+$secondary-l5: map-get($secondary-map, l5);
+$secondary-l4: map-get($secondary-map, l4);
+$secondary-l3: map-get($secondary-map, l3);
+$secondary-l2: map-get($secondary-map, l2);
+$secondary-l1: map-get($secondary-map, l1);
+$secondary: map-get($secondary-map, base);
+$secondary-d1: map-get($secondary-map, d1);
+$secondary-d2: map-get($secondary-map, d2);
+$secondary-d3: map-get($secondary-map, d3);
+$success-map: (
+'l2': #EDF9F0,
+'l1': #5ACA75,
+'base': #287D3C,
+'d1': #226A33,
+'d2': #1C5629,
+);
+$success-l2: map-get($success-map, l2);
+$success-l1: map-get($success-map, l1);
+$success: map-get($success-map, base);
+$success-d1: map-get($success-map, d1);
+$success-d2: map-get($success-map, d2);
+$info-map: (
+'l2': #EEF2FA,
+'l1': #89A7E0,
+'base': #2E5AAC,
+'d1': #294F98,
+'d2': #234584,
+);
+$info-l2: map-get($info-map, l2);
+$info-l1: map-get($info-map, l1);
+$info: map-get($info-map, base);
+$info-d1: map-get($info-map, d1);
+$info-d2: map-get($info-map, d2);
+$warning-map: (
+'l2': #FFF4EC,
+'l1': #FF8F39,
+'base': #B95000,
+'d1': #9F4500,
+'d2': #863A00,
+);
+$warning-l2: map-get($warning-map, l2);
+$warning-l1: map-get($warning-map, l1);
+$warning: map-get($warning-map, base);
+$warning-d1: map-get($warning-map, d1);
+$warning-d2: map-get($warning-map, d2);
+$danger-map: (
+'l6': #fceeee,
+'l5': #f8dedc,
+'l4': #f1b8b6,
+'l3': #ea9290,
+'l2': #e26a65,
+'l1': #da3835,
+'base': #b12824,
+'d1': #8a1e1d,
+'d2': #5f1513,
+'d3': #400e0d,
+);
+$danger-l6: map-get($danger-map, l6);
+$danger-l5: map-get($danger-map, l5);
+$danger-l4: map-get($danger-map, l4);
+$danger-l3: map-get($danger-map, l3);
+$danger-l2: map-get($danger-map, l2);
+$danger-l1: map-get($danger-map, l1);
+$danger: map-get($danger-map, base);
+$danger-d1: map-get($danger-map, d1);
+$danger-d2: map-get($danger-map, d2);
+$danger-d3: map-get($danger-map, d3);
+$light-map: (
+'l2': $white,
+'l1': map-get($grays, 100),
+'base': map-get($grays, 200),
+'d1': #E2E4EA,
+'d2': #D3D6E0,
+);
+$light-l2: map-get($light-map, l2);
+$light-l1: map-get($light-map, l1);
+$light: map-get($light-map, base);
+$light-d1: map-get($light-map, d1);
+$light-d2: map-get($light-map, d2);
+$dark-map: (
+'l2': map-get($grays, 800),
+'l1': #30313F,
+'base': map-get($grays, 900),
+'d1': #1C1C24,
+'d2': #111116,
+);
+$dark-l2: map-get($dark-map, l2);
+$dark-l1: map-get($dark-map, l1);
+$dark: map-get($dark-map, base);
+$dark-d1: map-get($dark-map, d1);
+$dark-d2: map-get($dark-map, d2);
+$border-radius-map: (
+'sm': 3px,
+'base': 4px,
+'lg': 6px,
+);
+$border-radius-sm: map-get($border-radius-map, sm);
+$border-radius-base: map-get($border-radius-map, base);
+$border-radius-lg: map-get($border-radius-map, lg);
+$font-family-map: (
+'base': #{-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji'},
+'monospace': #{SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace},
+'sans-serif': #{-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji'},
+'serif': #{Georgia, 'Times New Roman', Times, serif},
+);
+$font-family-base: map-get($font-family-map, base);
+$font-family-monospace: map-get($font-family-map, monospace);
+$font-family-sans-serif: map-get($font-family-map, sans-serif);
+$font-family-serif: map-get($font-family-map, serif);
+$font-size-map: (
+'sm': 14px,
+'base': 16px,
+'lg': 18px,
+);
+$font-size-sm: map-get($font-size-map, sm);
+$font-size-base: map-get($font-size-map, base);
+$font-size-lg: map-get($font-size-map, lg);
+$font-weight-map: (
+'lighter': lighter,
+'light': 300,
+'normal': 400,
+'semi-bold': 500,
+'bold': 700,
+'bolder': 900,
+);
+$font-weight-lighter: map-get($font-weight-map, lighter);
+$font-weight-light: map-get($font-weight-map, light);
+$font-weight-normal: map-get($font-weight-map, normal);
+$font-weight-semi-bold: map-get($font-weight-map, semi-bold);
+$font-weight-bold: map-get($font-weight-map, bold);
+$font-weight-bolder: map-get($font-weight-map, bolder);
+$spacers: (
+0: 0,
+1: 4px,
+2: 8px,
+3: 16px,
+4: 24px,
+5: 48px,
+6: 72px,
+7: 96px,
+8: 120px,
+9: 144px,
+10: 160px,
+);
+$link: (
+'color': map-get($primary-map, base),
+'hover': (
+'color': map-get($primary-map, d1),
+),
+'active': (
+'color': map-get($primary-map, d2),
+),
+);
+$link-color: map-get($link, color);
+$btn-box-shadow: clay-unset;
+$btn-focus-box-shadow: none;
+$btn: (
+'background-color': transparent,
+'border-color': transparent,
+'border-radius': 100px,
+'border-bottom-width': 1px,
+'border-left-width': 1px,
+'border-right-width': 1px,
+'border-top-width': 1px,
+'box-shadow': $btn-box-shadow,
+'color': map-get($grays, 900),
+'padding-bottom': 7px,
+'padding-left': 24px,
+'padding-right': 24px,
+'padding-top': 7px,
+'font-family': map-get($font-family-map, base),
+'font-size': 16px,
+'font-weight': map-get($font-weight-map, semi-bold),
+'line-height': 24px,
+'inline-item-before': (
+'margin-right': 8px,
+),
+'inline-item-after': (
+'margin-left': 8px,
+),
+'focus': (
+'background-color': clay-unset,
+'border-color': clay-unset,
+'box-shadow': $btn-focus-box-shadow,
+'color': clay-unset,
+),
+'active': (
+'position': relative,
+),
+'disabled': (
+'opacity': 1,
+'background-color': rgba(map-get($grays, 900), 0.12),
+'border-color': transparent,
+'color': rgba(map-get($grays, 900), 0.38),
+),
+'btn-section': (
+'font-family': map-get($font-family-map, base),
+'font-size': 11px,
+'font-weight': map-get($font-weight-map, normal),
+'line-height': 11px,
+),
+'lexicon-icon': (
+'height': map-get($font-size-map, base),
+'width': map-get($font-size-map, base),
+),
+'hover': (
+'box-shadow': 0 2px 4px -1px #000000,
+),
+);
+$btn-sizes: (
+'btn-sm': (
+'border-radius': 100px,
+'padding-bottom': 8px,
+'padding-left': 12px,
+'padding-right': 12px,
+'padding-top': 8px,
+'font-family': map-get($font-family-map, base),
+'font-size': map-get($font-size-map, sm),
+'font-weight': map-get($font-weight-map, semi-bold),
+'line-height': 16px,
+'btn-section': (
+'font-family': map-get($font-family-map, base),
+'font-size': 9px,
+'font-weight': map-get($font-weight-map, normal),
+'line-height': 9px,
+),
+'inline-item-before': (
+'margin-right': map-deep-get($btn, inline-item-before, margin-right),
+),
+'inline-item-after': (
+'margin-left': map-deep-get($btn, inline-item-after, margin-left),
+),
+'lexicon-icon': (
+'height': map-get($font-family-map, base),
+'width': map-get($font-family-map, base),
+),
+),
+'btn-lg': (
+'border-radius': 100px,
+'padding-bottom': 10px,
+'padding-left': 24px,
+'padding-right': 24px,
+'padding-top': 10px,
+'font-family': map-get($font-family-map, base),
+'font-size': map-get($font-size-map, lg),
+'font-weight': map-get($font-weight-map, semi-bold),
+'line-height': 28px,
+'btn-section': (
+'font-family': map-get($font-family-map, base),
+'font-size': 13px,
+'font-weight': map-get($font-weight-map, normal),
+'line-height': 13px,
+),
+'inline-item-before': (
+'margin-right': map-deep-get($btn, inline-item-before, margin-right),
+),
+'inline-item-after': (
+'margin-left': map-deep-get($btn, inline-item-after, margin-left),
+),
+'lexicon-icon': (
+'height': map-get($font-size-map, lg),
+'width': map-get($font-size-map, lg),
+),
+),
+);
+$btn-monospaced-sizes: (
+'btn-monospaced': (
+'padding-bottom': 0px,
+'padding-left': 0px,
+'padding-right': 0px,
+'padding-top': 0px,
+'font-family': map-get($font-family-map, base),
+'font-size': map-get($font-size-map, base),
+'font-weight': map-get($font-weight-map, semi-bold),
+'line-height': 16px,
+'height': 38px,
+'width': 38px,
+'lexicon-icon': (
+'height': map-get($font-size-map, base),
+'width': map-get($font-size-map, base),
+),
+),
+'btn-sm-monospaced': (
+'padding-bottom': 0px,
+'padding-left': 0px,
+'padding-right': 0,
+'padding-top': 0,
+'font-family': map-get($font-family-map, base),
+'font-size': map-get($font-size-map, sm),
+'font-weight': map-get($font-weight-map, semi-bold),
+'line-height': 1,
+'height': 36px,
+'width': 36px,
+'lexicon-icon': (
+'height': 16px,
+'width': 16px,
+),
+),
+'btn-lg-monospaced': (
+'padding-bottom': 0px,
+'padding-left': 0px,
+'padding-right': 0,
+'padding-top': 0,
+'font-family': map-get($font-family-map, base),
+'font-size': map-get($font-size-map, lg),
+'font-weight': map-get($font-weight-map, semi-bold),
+'line-height': 1,
+'height': 52px,
+'width': 52px,
+'lexicon-icon': (
+'height': map-get($font-size-map, lg),
+'width': map-get($font-size-map, lg),
+),
+),
+);
+$btn-palette: (
+'primary': (
+'enabled': false,
+),
+'secondary': (
+'enabled': false,
+),
+'success': (
+'enabled': false,
+),
+'info': (
+'enabled': false,
+),
+'warning': (
+'enabled': false,
+),
+'danger': (
+'enabled': false,
+),
+'light': (
+'enabled': false,
+),
+'dark': (
+'enabled': false,
+),
+'btn-primary': (
+'background-color': map-get($primary-map, base),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+'hover': (
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'background-color': map-get($primary-map, l1),
+'border-color': clay-unset,
+'color': $white,
+),
+'focus': (
+'background-color': map-get($primary-map, l1),
+'border-color': clay-unset,
+'box-shadow': $btn-focus-box-shadow,
+'color': $white,
+),
+'active': (
+'background-color': map-get($primary-map, l1),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': clay-unset,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-secondary': (
+'background-color': map-get($secondary-map, base),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+'hover': (
+'background-color': map-get($secondary-map, l1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': $white,
+),
+'focus': (
+'background-color': map-get($secondary-map, l1),
+'border-color': transparent,
+'box-shadow': $btn-focus-box-shadow,
+'color': $white,
+),
+'active': (
+'background-color': map-get($secondary-map, l1),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-success': (
+'background-color': map-get($success-map, base),
+'border-color': transparent,
+'color': $white,
+'hover': (
+'background-color': map-get($success-map, d1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': $white,
+),
+'focus': (
+'background-color': map-get($success-map, d1),
+'border-color': transparent,
+'box-shadow': $btn-focus-box-shadow,
+'color': $white,
+),
+'active': (
+'background-color': map-get($success-map, d2),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-info': (
+'background-color': map-get($info-map, base),
+'border-color': transparent,
+'color': $white,
+'hover': (
+'background-color': map-get($info-map, d1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': $white,
+),
+'focus': (
+'background-color': map-get($info-map, d1),
+'border-color': transparent,
+'box-shadow': $btn-focus-box-shadow,
+'color': $white,
+),
+'active': (
+'background-color': map-get($info-map, d2),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-warning': (
+'background-color': map-get($warning-map, base),
+'border-color': transparent,
+'color': $white,
+'hover': (
+'background-color': map-get($warning-map, d1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': $white,
+),
+'focus': (
+'background-color': map-get($warning-map, d1),
+'box-shadow': $btn-focus-box-shadow,
+'border-color': transparent,
+'color': $white,
+),
+'active': (
+'background-color': map-get($warning-map, d2),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-danger': (
+'background-color': map-get($danger-map, base),
+'border-color': transparent,
+'color': $white,
+'hover': (
+'background-color': map-get($danger-map, d1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': $white,
+),
+'focus': (
+'background-color': map-get($danger-map, d1),
+'box-shadow': $btn-focus-box-shadow,
+'border-color': transparent,
+'color': $white,
+),
+'active': (
+'background-color': map-get($danger-map, d2),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-light': (
+'background-color': map-get($light-map, base),
+'border-color': transparent,
+'color': map-deep-get($btn, disabled, color),
+'hover': (
+'background-color': map-get($light-map, d1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': map-get($grays, 900),
+),
+'focus': (
+'background-color': map-get($light-map, d1),
+'border-color': transparent,
+'box-shadow': $btn-focus-box-shadow,
+'color': map-get($grays, 900),
+),
+'active': (
+'background-color': map-get($light-map, d2),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': map-get($grays, 900),
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-dark': (
+'background-color': map-get($dark-map, base),
+'border-color': transparent,
+'color': $white,
+'hover': (
+'background-color': map-get($dark-map, d1),
+'border-color': transparent,
+'box-shadow': map-deep-get($btn, hover, box-shadow),
+'color': $white,
+),
+'focus': (
+'background-color': map-get($dark-map, d1),
+'box-shadow': $btn-focus-box-shadow,
+'border-color': transparent,
+'color': $white,
+),
+'active': (
+'background-color': map-get($dark-map, d2),
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': $white,
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+'btn-link': (
+'background-color': transparent,
+'border-color': transparent,
+'color': map-get($link, color),
+'hover': (
+'background-color': transparent,
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': map-deep-get($link, hover, color),
+),
+'focus': (
+'background-color': transparent,
+'border-color': transparent,
+'box-shadow': $btn-focus-box-shadow,
+'color': map-deep-get($link, hover, color),
+),
+'active': (
+'background-color': transparent,
+'border-color': transparent,
+'box-shadow': clay-unset,
+'color': map-deep-get($link, active, color),
+),
+'disabled': (
+'background-color': map-deep-get($btn, disabled, background-color),
+'border-color': map-deep-get($btn, disabled, border-color),
+'color': map-deep-get($btn, disabled, color),
+),
+),
+);

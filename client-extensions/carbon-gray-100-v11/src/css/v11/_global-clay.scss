@@ -262,9 +262,9 @@ $component-transition: color 0.15s ease-in-out,
 	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
 	box-shadow 0.15s ease-in-out !default;
 
-$component-focus-box-shadow: 0 0 0 0.0625rem $cds-black, 0 0 0 0.1875rem $cds-focus !default;
+$component-focus-box-shadow: inset 0 0 0 0.0625rem $cds-focus, inset 0 0 0 0.125rem $cds-focus-inset !default;
 $component-focus-inset-box-shadow: inset 0 0 0 0.125rem $cds-focus !default;
-$component-focus-inset-box-shadow-2: inset 0 0 0 0.0625rem $cds-focus !default;
+$component-focus-inset-box-shadow-2: inset 0 0 0 0.0625rem $cds-focus, inset 0 0 0 0.125rem $cds-focus-inset !default;
 
 $component-active-color: $cds-text-primary !default;
 $component-active-bg: $cds-border-interactive !default;

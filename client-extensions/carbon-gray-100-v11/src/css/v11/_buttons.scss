@@ -34,6 +34,7 @@ $btn-section-line-height: 1 !default;
 $btn: () !default;
 $btn: map-deep-merge(
 	(
+		merge: false,
 		align-items: center,
 		background-color: transparent,
 		border-color: transparent,
@@ -78,14 +79,12 @@ $btn: map-deep-merge(
 		),
 		active: (
 			border-color: transparent,
-			box-shadow: c-unset,
 			focus: (
 				box-shadow: none,
 			),
 		),
 		active-class: (
 			border-color: transparent,
-			box-shadow: c-unset,
 			focus: (
 				border-color: $cds-focus,
 				box-shadow: $btn-focus-box-shadow,
@@ -104,13 +103,8 @@ $btn: map-deep-merge(
 				pointer-events: none,
 			),
 		),
-		show: (
-			border-color: c-unset,
-		),
 		inline-item: (
 			font-size: $btn-inline-item-font-size,
-			line-height: c-unset,
-			margin-top: c-unset,
 			lexicon-icon: (
 				margin-top: 0,
 			),
@@ -143,6 +137,7 @@ $btn-padding-y-lg-mobile: null !default;
 $btn-lg: () !default;
 $btn-lg: map-deep-merge(
 	(
+		merge: false,
 		border-radius: clay-enable-rounded($btn-border-radius-lg),
 		font-size: $btn-font-size-lg,
 		line-height: $btn-line-height-lg,
@@ -162,9 +157,6 @@ $btn-lg: map-deep-merge(
 		),
 		btn-section: (
 			font-size: $btn-section-font-size-lg,
-		),
-		lexicon-icon: (
-			font-size: c-unset,
 		),
 	),
 	$btn-lg
@@ -187,6 +179,7 @@ $btn-padding-y-sm-mobile: null !default;
 $btn-sm: () !default;
 $btn-sm: map-deep-merge(
 	(
+		merge: false,
 		border-radius: clay-enable-rounded($btn-border-radius-sm),
 		font-size: $btn-font-size-sm,
 		line-height: $btn-line-height-sm,
@@ -207,9 +200,6 @@ $btn-sm: map-deep-merge(
 		btn-section: (
 			font-size: $btn-section-font-size-sm,
 		),
-		lexicon-icon: (
-			font-size: c-unset,
-		),
 	),
 	$btn-sm
 );
@@ -220,14 +210,13 @@ $btn-sizes: () !default;
 $btn-sizes: map-deep-merge(
 	(
 		btn-xs: (
-			font-size: c-unset,
+			merge: false,
 			padding-bottom: 0.125rem,
 			padding-left: 0.5rem,
 			padding-right: 0.5rem,
 			padding-top: 0.125rem,
 			inline-item: (
 				font-size: inherit,
-				margin-top: c-unset,
 			),
 			inline-item-before: (
 				margin-right: 0.25rem,
@@ -269,6 +258,7 @@ $btn-monospaced-size-mobile: null !default;
 $btn-monospaced: () !default;
 $btn-monospaced: map-deep-merge(
 	(
+		merge: false,
 		align-items: center,
 		display: inline-flex,
 		flex-direction: column,
@@ -318,6 +308,7 @@ $btn-monospaced-size-lg-mobile: null !default;
 $btn-monospaced-lg: () !default;
 $btn-monospaced-lg: map-deep-merge(
 	(
+		merge: false,
 		height: $btn-monospaced-size-lg,
 		padding-bottom: $btn-monospaced-padding-y-lg,
 		padding-left: $btn-monospaced-padding-x-lg,
@@ -343,6 +334,7 @@ $btn-monospaced-size-sm-mobile: null !default;
 $btn-monospaced-sm: () !default;
 $btn-monospaced-sm: map-deep-merge(
 	(
+		merge: false,
 		height: $btn-monospaced-size-sm,
 		padding-bottom: $btn-monospaced-padding-y-sm,
 		padding-left: $btn-monospaced-padding-x-sm,
@@ -363,6 +355,7 @@ $btn-monospaced-sizes: () !default;
 $btn-monospaced-sizes: map-deep-merge(
 	(
 		btn-monospaced-xs: (
+			merge: false,
 			height: 1.5rem,
 			width: 1.5rem,
 		),
@@ -370,6 +363,7 @@ $btn-monospaced-sizes: map-deep-merge(
 		btn-monospaced-sm: $btn-monospaced-sm,
 		btn-monospaced-lg: $btn-monospaced-lg,
 		btn-monospaced-xl: (
+			merge: false,
 			height: 4rem,
 			width: 4rem,
 		),
@@ -386,6 +380,7 @@ $btn-block-spacing-y: 0.5rem !default;
 $btn-unstyled: () !default;
 $btn-unstyled: map-deep-merge(
 	(
+		merge: false,
 		background-color: rgba(0, 0, 0, 0.001),
 		border-width: 0,
 		color: inherit,
@@ -423,9 +418,8 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-button-primary,
-		background-image: c-unset,
-		border-color: c-unset,
 		box-shadow: clay-enable-shadows($btn-box-shadow),
 		color: $cds-text-on-color,
 		visited: (
@@ -433,29 +427,18 @@ $btn-primary: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-button-primary-hover,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-button-primary,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-button-primary-active,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -465,40 +448,26 @@ $btn-primary: map-deep-merge(
 $btn-secondary: () !default;
 $btn-secondary: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-button-secondary,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-text-on-color,
 		visited: (
 			color: $cds-text-on-color,
 		),
 		hover: (
 			background-color: $cds-button-secondary-hover,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-button-secondary,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-button-secondary-active,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -508,7 +477,7 @@ $btn-secondary: map-deep-merge(
 $btn-tertiary: () !default;
 $btn-tertiary: map-deep-merge(
 	(
-		background-color: c-unset,
+		merge: false,
 		border-color: $cds-button-tertiary,
 		color: $cds-button-tertiary,
 		visited: (
@@ -516,18 +485,14 @@ $btn-tertiary: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-button-tertiary-hover,
-			border-color: c-unset,
 			color: $cds-text-inverse,
 		),
 		focus: (
 			background-color: $cds-button-tertiary,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-inverse,
 		),
 		active: (
 			background-color: $cds-button-tertiary-active,
-			border-color: c-unset,
 			color: $cds-text-inverse,
 		),
 		disabled: (
@@ -542,40 +507,26 @@ $btn-tertiary: map-deep-merge(
 $btn-success: () !default;
 $btn-success: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-green-60,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-text-on-color,
 		visited: (
 			color: $cds-text-on-color,
 		),
 		hover: (
 			background-color: $cds-green-70,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-green-60,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-green-80,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -585,40 +536,26 @@ $btn-success: map-deep-merge(
 $btn-info: () !default;
 $btn-info: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-cyan-60,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-text-on-color,
 		visited: (
 			color: $cds-text-on-color,
 		),
 		hover: (
 			background-color: $cds-cyan-70,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-cyan-60,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-cyan-80,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -628,40 +565,26 @@ $btn-info: map-deep-merge(
 $btn-warning: () !default;
 $btn-warning: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-yellow-60,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-text-on-color,
 		visited: (
 			color: $cds-text-on-color,
 		),
 		hover: (
 			background-color: $cds-yellow-70,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-yellow-60,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-yellow-80,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -671,40 +594,26 @@ $btn-warning: map-deep-merge(
 $btn-danger: () !default;
 $btn-danger: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-button-danger-primary,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-text-on-color,
 		visited: (
 			color: $cds-text-on-color,
 		),
 		hover: (
 			background-color: $cds-button-danger-hover,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-button-danger-primary,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-button-danger-active,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -714,6 +623,7 @@ $btn-danger: map-deep-merge(
 $btn-danger-tertiary: () !default;
 $btn-danger-tertiary: map-deep-merge(
 	(
+		merge: false,
 		background-color: transparent,
 		border-color: $cds-button-danger-secondary,
 		color: $cds-button-danger-secondary,
@@ -722,17 +632,14 @@ $btn-danger-tertiary: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-button-danger-hover,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-button-danger-secondary,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-button-danger-active,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		disabled: (
@@ -747,40 +654,26 @@ $btn-danger-tertiary: map-deep-merge(
 $btn-light: () !default;
 $btn-light: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-gray-10,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-gray-90,
 		visited: (
 			color: $cds-gray-90,
 		),
 		hover: (
 			background-color: $cds-gray-20,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-gray-90,
 		),
 		focus: (
 			background-color: $cds-gray-10,
-			background-image:c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-gray-90,
 		),
 		active: (
 			background-color: $cds-gray-30,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-gray-90,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 		loading-animation: 'loading-animation-light',
@@ -791,40 +684,26 @@ $btn-light: map-deep-merge(
 $btn-dark: () !default;
 $btn-dark: map-deep-merge(
 	(
+		merge: false,
 		background-color: $cds-gray-80,
-		background-image: c-unset,
-		border-color: c-unset,
-		box-shadow: c-unset,
 		color: $cds-text-on-color,
 		visited: (
 			color: $cds-text-on-color,
 		),
 		hover: (
 			background-color: $cds-gray-90,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-gray-80,
-			background-image: c-unset,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-gray-100,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
 		),
 	),
@@ -836,10 +715,8 @@ $btn-link-disabled-color: c-unset !default;
 $btn-link: () !default;
 $btn-link: map-deep-merge(
 	(
-		border-radius: c-unset,
-		box-shadow: c-unset,
+		merge: false,
 		color: $cds-link-primary,
-		font-weight: c-unset,
 		padding-right: $btn-padding-x,
 		text-decoration: none,
 		visited: (
@@ -853,7 +730,6 @@ $btn-link: map-deep-merge(
 		focus: (
 			background-color: transparent,
 			color: $cds-link-primary,
-			box-shadow: c-unset,
 			text-decoration: none,
 		),
 		active: (
@@ -862,10 +738,7 @@ $btn-link: map-deep-merge(
 		),
 		disabled: (
 			background-color: $cds-button-disabled,
-			background-image: c-unset,
-			border-color: c-unset,
 			color: $cds-text-on-color-disabled,
-			text-decoration: c-unset,
 		),
 	),
 	$btn-link
@@ -906,6 +779,7 @@ $btn-palette: map-deep-merge(
 $btn-outline-primary: () !default;
 $btn-outline-primary: map-deep-merge(
 	(
+		merge: false,
 		border-color: $cds-blue-50,
 		color: $cds-blue-50,
 		visited: (
@@ -913,22 +787,15 @@ $btn-outline-primary: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-blue-60-hover,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-blue-50,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-blue-80,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -945,6 +812,7 @@ $btn-outline-secondary: map-deep-merge($btn-tertiary, $btn-outline-secondary);
 $btn-outline-success: () !default;
 $btn-outline-success: map-deep-merge(
 	(
+		merge: false,
 		border-color: $cds-green-50,
 		color: $cds-green-50,
 		visited: (
@@ -952,22 +820,15 @@ $btn-outline-success: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-green-70,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-green-60,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-green-80,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -981,6 +842,7 @@ $btn-outline-success: map-deep-merge(
 $btn-outline-info: () !default;
 $btn-outline-info: map-deep-merge(
 	(
+		merge: false,
 		border-color: $cds-cyan-50,
 		color: $cds-cyan-50,
 		visited: (
@@ -988,22 +850,15 @@ $btn-outline-info: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-cyan-70,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-cyan-60,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-cyan-80,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -1017,6 +872,7 @@ $btn-outline-info: map-deep-merge(
 $btn-outline-warning: () !default;
 $btn-outline-warning: map-deep-merge(
 	(
+		merge: false,
 		border-color: $cds-yellow-50,
 		color: $cds-yellow-50,
 		visited: (
@@ -1024,22 +880,15 @@ $btn-outline-warning: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-yellow-70,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-yellow-60,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-yellow-80,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -1056,6 +905,7 @@ $btn-outline-danger: map-deep-merge($btn-outline-danger, $btn-danger-tertiary);
 $btn-outline-light: () !default;
 $btn-outline-light: map-deep-merge(
 	(
+		merge: false,
 		border-color: $cds-gray-10,
 		color: $cds-gray-10,
 		visited: (
@@ -1063,22 +913,15 @@ $btn-outline-light: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-gray-20,
-			border-color: c-unset,
 			color: $cds-gray-90,
 		),
 		focus: (
 			background-color: $cds-gray-10,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-gray-90,
 		),
 		active: (
 			background-color: $cds-gray-30,
-			border-color: c-unset,
 			color: $cds-gray-90,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -1092,6 +935,7 @@ $btn-outline-light: map-deep-merge(
 $btn-outline-dark: () !default;
 $btn-outline-dark: map-deep-merge(
 	(
+		merge: false,
 		border-color: $cds-gray-90,
 		color: $cds-gray-90,
 		visited: (
@@ -1099,22 +943,15 @@ $btn-outline-dark: map-deep-merge(
 		),
 		hover: (
 			background-color: $cds-gray-90,
-			border-color: c-unset,
 			color: $cds-text-on-color,
 		),
 		focus: (
 			background-color: $cds-gray-80,
-			border-color: c-unset,
-			box-shadow: c-unset,
 			color: $cds-text-on-color,
 		),
 		active: (
 			background-color: $cds-gray-100,
-			border-color: c-unset,
 			color: $cds-text-on-color,
-			focus: (
-				box-shadow: c-unset,
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -1128,16 +965,8 @@ $btn-outline-dark: map-deep-merge(
 $btn-outline-borderless: () !default;
 $btn-outline-borderless: map-deep-merge(
 	(
+		merge: false,
 		border-color: transparent,
-		hover: (
-			border-color: c-unset,
-		),
-		focus: (
-			border-color: c-unset,
-		),
-		disabled: (
-			border-color: c-unset,
-		),
 	),
 	$btn-outline-borderless
 );
