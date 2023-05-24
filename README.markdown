@@ -16,3 +16,29 @@ This workspace contains two examples of implementing the [Carbon Design System](
 
 1. Update `liferay.workspace.home.dir=` in your `gradle.properties` file to point towards your Liferay bundle.
 1. From the `client-extensions` directory run `blade gw deploy`.
+
+## References
+
+- *Theme CSS Client Extensions Documentation*
+
+	https://learn.liferay.com/w/dxp/building-applications/client-extensions/front-end-client-extensions/tutorials/using-a-css-client-extension
+
+- *Carbon Design System Gray 100 Figma*
+
+	https://www.figma.com/community/file/1157763881353486317
+
+- *Carbon Design System White Figma*
+
+	https://www.figma.com/community/file/1157761560874207208
+
+- *Carbon Design System Web Implementation*
+
+	https://carbondesignsystem.com/components/overview/
+
+- *Clay Paver 2*
+
+	https://pat270.github.io/clay-paver-2/
+
+- *Clay Documentation*
+
+	https://clayui.com/docs/css/scss.html
